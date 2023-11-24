@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        section{
+            border: 3px solid blue;
+            width: 750px;
+            display: flex;
+            justify-content: space-between;
+        }
+        p{
+            border: 2px solid red;
+
+        }
+        section>p{
+            flex: 0 0 35%;
+        }
+        section>p+p{
+            flex: 0 0 40%;
+        }
+        section div{
+            flex:  0 1 25%;
+        }
+        .boton{
+            background-color: lightcoral;
+            text-align: center;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <p><img src="../Pruebas/img/thunderstorm-3440450_1280.jpg" width="100%"></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptas ipsam laudantium animi totam repudiandae
+        cumque iure aut voluptatibus! Id doloremque voluptatibus provident asperiores veniam a nostrum. Incidunt, ipsam cupiditate.</p>
+        <div>
+            <p class="boton"> pica aqui </p>
+            <p class="boton"> pica aqui</p>
+         </div>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,19 @@
+@font-face {
+    font-family: Fuente01;
+    src: url(../Fuentes/Fuente01.ttf);
+}
+@font-face {
+    font-family: Fuente02;
+    src: url(../Fuentes/Fuente02.ttf);
+}
+h1{
+    font-family: Fuente01,Arial, Helvetica, sans-serif;
+    background-color: lightgray;
+    text-align: center;
+}
+h2{
+    font-family: Fuente02;
+}
+p.datos{
+    font-style: italic;
+}

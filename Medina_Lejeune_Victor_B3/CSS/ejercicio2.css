@@ -1,0 +1,20 @@
+@font-face {
+    font-family: Fuente01;
+    src: url(../Fuentes/Fuente01.ttf);
+}
+@font-face {
+    font-family: Fuente02;
+    src: url(../Fuentes/Fuente02.ttf);
+}
+h1,h2{
+    font-family: Fuente02,Arial, Helvetica, sans-serif;
+}
+body{ 
+    background-color:lightgoldenrodyellow;
+}
+p{
+    font-family: Fuente01;
+}
+div{
+    text-align: center;
+}

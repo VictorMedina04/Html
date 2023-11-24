@@ -1,0 +1,35 @@
+envoltorio{
+    width: 50%;
+    height: 50px; 
+}
+#envoltorio header{
+    width: 100%;
+    height: 100px;  
+    background-color: rgb(37, 150, 190);
+    text-align: center;
+    color: white;
+    padding: 0.5%;
+    font-size: 20px;
+}
+#envoltorio nav{
+    width: 100%;
+    height: 50px;  
+    background-color: rgba(79, 192, 34, 0.568);
+    color: white;
+    padding: 0.1px;
+    font-size: 20px; 
+}
+#envoltorio #contenido{
+    display: flex;
+    width: 25%;
+}
+#envoltorio #contenido aside #izq{
+    background-color: black;
+    color: white;
+}
+#envoltorio #contenido aside #drch{
+
+}
+#envoltorio footer{
+
+}
