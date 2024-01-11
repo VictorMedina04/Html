@@ -11,10 +11,8 @@
             margin: 0 auto;
         }
         nav ul{
-            display: flex;
             list-style: none;
             padding-left: 0%;
-            padding: 0%;
             color: white;
             background-color: black;
         }
@@ -23,18 +21,18 @@
             padding: 10px;     
             border-right: none;
         }
+        nav>ul{
+            display: flex;
+        }
+
 
     </style>
 </head>
 <body>
     <nav>
         <ul>
-            <li><i class="bi bi-apple"></i></li>
-            <li>Tienda 
-                <ul>
-                    <li>Compra</li>
-                </ul>
-            </li>
+            <a href="https://www.apple.com/es/apple-watch-series-9/"><li><i class="bi bi-apple"></i></li></a>       
+            <li>Tienda</li>
             <li>Mac</li>
             <li>iPad</li>
             <li>iPhone</li>
