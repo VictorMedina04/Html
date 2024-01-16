@@ -1,41 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ejercicio6</title>
     <style>
-    a{
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
+    nav{
+    width: 80%;
+    margin: 0 auto;
     }
-    nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        background-color: #333;
-        overflow: hidden;
-    }
-    nav ul a {
-        display: block;
+    nav ul{
+        background-color: #333333;
         color: white;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
     }
-    nav ul a:hover {
-        transform: scaleY(1.05);
+    nav ul a{
+        flex: 1 1 auto;
+        text-align: center;
+        padding: 1%;
+    }
+    nav ul a:hover{
+        background-color: #9b1c26;
+        transform: scaleY(1.08);
     }
     </style>
 </head>
-<body>
-    <ul>
-        <a href="#home"><li>Inicio</li></a>
-        <a href="#noticias"><li>Noticias</li></a>
-        <a href="#contacto"><li>Contacto</li></a>
-        <a href="#acerca"><li>Acerca de</li></a>
-    </ul>
-</body>
+    <body>
+        <div id="todo">        
+            <nav>
+                <ul>
+                    <a><li>Home</li></a>
+                    <a><li>About</li></a>
+                    <a><li>Services</li></a>
+                    <a><li>Products</li></a>
+                    <a><li>Sitemap</li></a>
+                    <a><li>Help</li></a>
+                    <a><li>Contact Us</li></a>
+                </ul>
+            </nav>
+        </div>
+    </body>
 </html>
-

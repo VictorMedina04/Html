@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ejercicio7</title>
+  <style>
+  ubody {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  li {
+    position: relative;
+    padding: 10px;
+    background-color: #030d9c;
+    color: #fff;
+  }
+  
+  ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    background-color: #1b6a81;
+    z-index: 1;
+  }
+  
+  ul li:hover ul {
+    display: flex;
+    flex-wrap: wrap;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li>Inicio
+        <ul>
+          <li>Subopción 1</li>
+          <li>Subopción 2</li>
+          <li>Subopción 3</li>
+          <li>Subopción 4</li>
+          <li>Subopción 5</li>
+        </ul>
+      </li>
+      <li>Quiénes somos
+        <ul>
+          <li>Subopción 1</li>
+          <li>Subopción 2</li>
+          <li>Subopción 3</li>
+          <li>Subopción 4</li>
+          <li>Subopción 5</li>
+        </ul>
+      </li>
+      <li>Dónde estamos
+        <ul>
+          <li>Subopción 1</li>
+          <li>Subopción 2</li>
+          <li>Subopción 3</li>
+          <li>Subopción 4</li>
+          <li>Subopción 5</li>
+        </ul>
+      </li>
+      <li>Contacto
+        <ul>
+          <li>Subopción 1</li>
+          <li>Subopción 2</li>
+          <li>Subopción 3</li>
+          <li>Subopción 4</li>
+          <li>Subopción 5</li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+</body>
+</html>

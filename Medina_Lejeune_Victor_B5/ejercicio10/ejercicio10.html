@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio10</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        margin: 0 auto;
+    }
+    nav{
+        position: relative;
+        display: flex;
+        width: 50%;
+        font-size: 40px;
+    }
+    nav ul{
+        width: 0%;
+        flex-direction: column;
+        list-style-type: none;
+        transition: 0.5s all;
+    }
+    nav i:hover+ul{
+        width: 100%;
+    }
+    nav ul li{
+        background-color: rgba(61, 61, 61, 0.76);
+        color: white;
+    }
+    nav ul li i{
+        padding: 25px;
+        margin-right: 40px;
+        font-size: 30px;
+    }
+    nav ul li p{
+        padding-left: 25px;
+        overflow: hidden;
+        font-size: 0;
+        transition: 0.5s;
+        background-color: rgb(33, 41, 38);
+        margin-bottom: auto;
+        margin-top: auto;
+    }
+    nav ul li:hover p{
+        font-size: inherit;
+        margin-bottom: auto;
+        margin-top: auto;
+    }
+ </style>
+</head>
+    <body>
+        <nav>
+            <i><i class="bi bi-list"></i></i>
+            <ul>
+                <li><i class="bi bi-person-circle"></i>Profile
+                    <p>Nombre<br>Correo<br>Seguidores<br>Siguiendo<br>Ver Perfil</p>
+                </li>
+                <li><i class="bi bi-inbox"></i>Messages
+                    <p>Entrantes<br>Solicitudes<br>No deseados<br>Spam<br></p>
+                </li>
+                <li><i class="bi bi-gear"></i>Settings
+                    <p>Tu cuenta<br>Seguridad<br>Cambiar contraseña<br>Privacidad<br>Notificaciones</p></li>
+                <li><i class="bi bi-patch-question"></i>Help</li>
+                <li><i class="bi bi-door-open"></i>Logout</li>
+            </ul>
+        </nav>
+    </body>
+</html>
+

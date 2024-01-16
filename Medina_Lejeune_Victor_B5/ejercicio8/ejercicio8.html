@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    transition: background-color 0.3s ease-in-out;
+    position: relative;
+    padding: 10px;
+    background-color: #4279ca;
+    color: #fff;
+    cursor: pointer;
+    
+  }
+
+  li:hover {
+    background-color: #3a332d;
+  }
+
+  ul ul {
+    display: none;
+    padding: 0;
+    margin: 0;
+    background-color: #ff0000;
+    position: relative;
+  }
+
+  li:hover > ul {
+    display: block;
+  }
+
+  ul ul li {
+    padding: 10px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  ul ul li:hover {
+    background-color: #4279ca;
+  }
+
+  ul ul li{
+    background-color: #333333;
+  }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li>Perfil
+        <ul>
+          <li>Personalización</li>
+          <li>Amigos</li>
+          <li>Conexiones</li>
+          <li>Guardados</li>
+        </ul>
+      </li>
+      <li>Mensajes
+        <ul>
+          <li>Bandeja de entrada</li>
+          <li>Solicitudes</li>
+        </ul>
+      </li>
+      <li>Ajustes
+        <ul>
+          <li>Cuenta</li>
+          <li>Privacidad 2</li>
+          <li>Notificaciones 3</li>
+        </ul>
+      </li>
+      <li>Ayuda
+        <ul>
+          <li>Accesibilidad</li>
+          <li>Preguntas frecuentes</li>
+        </ul>
+      </li>
+      <li>Cerrar sesión
+      </li>
+    </ul>
+  </nav>
+
+</body>
+</html>

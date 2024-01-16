@@ -1,42 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    nav{
-        width: 85%;
-        margin: 0 auto;
+    <title>ejercicio 5</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c5752a;
     }
-    nav ul{
-        list-style: none;
-        padding-left: 0%;
-        color: white;
-        background-color: aqua;
-        border-right:none;
-        width: 100%;
-        display: flex;
+    header {
+        background-color: #9e4636;
+        color: #fff;
+        padding: 10px;
         text-align: center;
     }
-    nav ul li{
-        padding: 10px;
-        border-top-right-radius: 5%;
-        border-bottom-left-radius: 5%;
+
+    nav {
+        display: flex;
+        justify-content: center;
+        background-color:#cc7156;
+        
     }
-</style>
+
+    nav a { 
+        text-decoration: none;
+        color: #0a0a0a;
+        padding: 15px 25px;
+        border-radius: 8px 8px 0 0;
+        background-color: #ad6f1d;
+        transition: background-color 0.3s;
+    }
+
+    nav a:hover {
+        background-color:#48913d;
+        
+    }
+
+    section {
+        display: none;
+        padding: 20px;
+    }
+
+    section:target {
+        display: block;
+    }
+    </style>
+</head>
 <body>
+
+    <header>
+        <h1>Conócenos</h1>
+    </header>
+
     <nav>
-        <ul>
-            <li>Inicio</li>
-            <li>Quienes somos</li>
-            <li>Dónde estamos</li>
-            <li>Noticias</li>
-            <li>Descargas</li>
-            <li>Galería de fotos</li>
-            <li>Contacto</li>
-        </ul>        
+        <a href="#inicio">Inicio</a>
+        <a href="#quienes-somos">Quiénes Somos</a>
+        <a href="#donde-estamos">Dónde Estamos</a>
+        <a href="#noticias">Noticias</a>
+        <a href="#descargas">Descargas</a>
+        <a href="#galeria">Galería de Fotos</a>
+        <a href="#contacto">Contacto</a>
     </nav>
+
+    <section id="inicio">
+        <h2>Contenido de Inicio</h2>
+        <p>Bienvenido a la página de inicio</p>
+    </section>
+
+    <section id="quienes-somos">
+        <h2>Quiénes Somos</h2>
+        <p>Somos la empresa Salesianos, especializados en el sector de la educación</p>
+    </section>
+
+    <section id="donde-estamos">
+        <h2>Dónde Estamos</h2>
+        <p>Nos encontranmos en la Calle Condes de Bustillo </p>
+    </section>
+
+    <section id="noticias">
+        <h2>Noticias</h2>
+        <p>Últimas noticias sobre la empresa</p>
+    </section>
+
+    <section id="descargas">
+        <h2>Descargas</h2>
+        <p>Descarga aquí archivos de interés</p>
+    </section>
+
+    <section id="galeria">
+        <h2>Galería de Fotos</h2>
+        <p>Imágenes del centro:</p>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Contáctanos a través de:</p>
+        <p>triana@triana.salesianos.edu</p>
+    </section>
+
 </body>
 </html>

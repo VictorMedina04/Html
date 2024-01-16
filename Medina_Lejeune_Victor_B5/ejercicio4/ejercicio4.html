@@ -1,13 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ejercicio4</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    }
+
+    #menu {
+    list-style: none;
+    background-color: #333;
+    width: 150px;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    }
+
+    #menu a {
+    text-decoration: none;
+    color: #fff;
+    padding: 15px;
+    box-sizing: border-box;
+    display: block;
+    transition: background-color 0.3s ease;
+    }
+
+    #menu a:hover {
+    background-color: #555;
+    }
+
+    .menuchico {
+    display: none;
+    background-color: #444;
+    }
+
+    #menu li:hover .menuchico {
+    display: block;
+    }
+
+    li img{
+    width: 30%;
+    }
+
+    li{
+    list-style: none;
+    }
+    </style>
 </head>
 <body>
-    <nav>
-            
-    </nav>
-</body>
-</html>
+
+<ul id="menu">
+    <li>
+        <a id="inicio" href="#"><img src="./img/home-7-xxl.png"></a>
+        <ul class="menuchico">
+            <li><a href="#"><img src="./img/add-file-xxl.png"></a></li>
+            <li><a href="#"><img src="./img/edit-xxl.png"></a></li>
+            <li><a href="#"><img src="./img/transparent-eye-icon-eyecons-icon-view-icon-5d63a8597f7604.7410175115668122495221.png"></a></li>
+            <li><a href="#"><img src="./img/photo-xxl.png"></a></li>
+        </ul>
+    </li>
+</ul>
