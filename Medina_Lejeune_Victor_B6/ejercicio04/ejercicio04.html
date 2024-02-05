@@ -26,17 +26,27 @@
     tbody tr td:first-child{
         font-weight: bold;
     }
-    #verde{
-        color: greenyellow;
+    tr:nth-child(even){
+        background-color: antiquewhite;
     }
-    #rojo{
+    td:hover{
+        background-color: gray;
+    }
+    tr:hover,td:hover{
+        border: solid 2px;
+  
+    }
+    .verde{
+        color: rgb(73, 107, 22);
+    }
+    .rojo{
         color: red;
     }
 </style>
 <body>
     <table>
         <thead>
-            <caption>Indice</caption>
+            <caption>Indice<hr></caption>
             <th>Indice</th>
             <th>Ultimo</th>
             <th>Var.%Var.</th>
@@ -50,7 +60,7 @@
             <tr>
                 <td>IBEX 35</td>
                 <td>9.234,6</td>
-                <td>+0,43 +39,30</td>
+                <td class="verde">+0,43 +39,30</td>
                 <td>9.845,2</td>
                 <td>9.256,2</td>
                 <td></td>
@@ -60,7 +70,7 @@
             <tr>
                 <td>FTSE 100</td>
                 <td>7.435,17</td>
-                <td>+0,26 +20,46</td>
+                <td class="verde">+0,26 +20,46</td>
                 <td>7.932,5</td>
                 <td>7.857,66</td>
                 <td></td>
@@ -70,7 +80,7 @@
             <tr>
                 <td>DAX 30</td>
                 <td>15.363,73</td>
-                <td>+1,13 +174,68</td>
+                <td class="verde">+1,13 +174,68</td>
                 <td>15.634,11</td>
                 <td>15.573,5</td>
                 <td></td>
@@ -80,7 +90,7 @@
             <tr>
                 <td>CAC 40</td>
                 <td>7.119,83</td>
-                <td>-0,18 -12,52</td>
+                <td class="rojo">-0,18 -12,52</td>
                 <td>7.190,86</td>
                 <td>7.119,83</td>
                 <td></td>
@@ -90,7 +100,7 @@
             <tr>
                 <td>FTSE MIB</td>
                 <td>27.160,73</td>
-                <td>+0,15 +41,99</td>
+                <td class="verde">+0,15 +41,99</td>
                 <td>27.377,01</td>
                 <td>27.160,73</td>
                 <td></td>
@@ -100,7 +110,7 @@
             <tr>
                <td>EURO STOXX 50</td>
                <td>4.252,24</td>
-               <td>+1,02 +43,09</td>
+               <td class="verde">+1,02 +43,09</td>
                <td>4.255,55</td>
                <td>4.226,85</td>
                <td></td>
@@ -110,7 +120,7 @@
             <tr>
                 <td>DOW JONES 30</td>
                 <td>33.949,01</td>
-                <td>-0,61 -207,68</td>
+                <td class="rojo">-0,61 -207,68</td>
                 <td>34.161,65</td>
                 <td>33.899,79</td>
                 <td>324.091.488</td>
@@ -119,22 +129,43 @@
             </tr>
             <tr>
                 <td>S&P 500</td>
+                <td>4.117,86</td>
+                <td class="rojo">-1,11 -46,14</td>
+                <td>4.156.85</td>
+                <td>4.111,67</td>
+                <td>2.543.426.560</td>
                 <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>08/02</td>
             </tr>
             <tr>
                 <td>NASDAQ</td>
+                <td>11.910,52</td>
+                <td class="rojo">-1,68 -203,27</td>
+                <td>12.096,39</td>
+                <td>11.890,09</td>
+                <td></td>
+                <td>13.354.548</td>
+                <td>08/02</td>
             </tr>
             <tr>
                 <td>NASDAQ 100</td>
+                <td>12.495,38</td>
+                <td class="rojo">-1,83 -232,90</td>
+                <td>12.709,45</td>
+                <td>12.471,12</td>
+                <td></td>
+                <td>9.378.658</td>
+                <td>08/02</td>
             </tr>
             <tr>
                 <td>DJ STOXX 50</td>
+                <td>3.917,14</td>
+                <td class="verde">+0,74 +28,82</td>
+                <td>3.920,87</td>
+                <td>3.898,34</td>
+                <td></td>
+                <td></td>
+                <td>09:17</td>
             </tr>
         </tbody>
 
