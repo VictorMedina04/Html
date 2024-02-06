@@ -4,257 +4,343 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table{
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        thead{
+            border-bottom: solid 1px black;
+        }
+        tbody tr:first-child{
+            border-bottom: solid 2px red;
+        }
+        tr:nth-child(even){
+            background-color: gainsboro;
+        }
+
+    </style>
 </head>
 <body>
     <table>
         <thead>
-            <th></th>
+            <th colspan="3"></th>
             <th colspan="7">TOTALES</th>
             <th colspan="7">EN CASA</th>
             <th colspan="7">FUERA</th>
         </thead>
         <tbody>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td colspan="3">EQUIPOS</td>
+                <td>PT</td>
+                <td>PJ</td>
+                <td>PG</td>
+                <td>PE</td>
+                <td>PP</td>
+                <td>GF</td>
+                <td>GC</td>
+                <td>PT</td>
+                <td>PJ</td>
+                <td>PG</td>
+                <td>PE</td>
+                <td>PP</td>
+                <td>GF</td>
+                <td>GC</td>
+                <td>PT</td>
+                <td>PJ</td>
+                <td>PG</td>
+                <td>PE</td>
+                <td>PP</td>
+                <td>GF</td>
+                <td>GC</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>1</td>
+                <td>LOGO</td>
+                <td>R. Madrid</td>
+                <td>58</td>
+                <td>23</td>
+                <td>18</td>
+                <td>4</td>
+                <td>1</td>
+                <td>48</td>
+                <td>15</td>
+                <td>29</td>
+                <td>11</td>
+                <td>9</td>
+                <td>2</td>
+                <td>0</td>
+                <td>26</td>
+                <td>7</td>
+                <td>29</td>
+                <td>12</td>
+                <td>9</td>
+                <td>2</td>
+                <td>1</td>
+                <td>22</td>
+                <td>8</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>2</td>
+                <td>LOGO</td>
+                <td>Girona</td>
+                <td>56</td>
+                <td>23</td>
+                <td>17</td>
+                <td>5</td>
+                <td>1</td>
+                <td>52</td>
+                <td>25</td>
+                <td>29</td>
+                <td>12</td>
+                <td>9</td>
+                <td>2</td>
+                <td>1</td>
+                <td>30</td>
+                <td>14</td>
+                <td>27</td>
+                <td>11</td>
+                <td>8</td>
+                <td>3</td>
+                <td>0</td>
+                <td>22</td>
+                <td>11</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>3</td>
+                <td>LOGO</td>
+                <td>Barcelona</td>
+                <td>50</td>
+                <td>23</td>
+                <td>15</td>
+                <td>5</td>
+                <td>3</td>
+                <td>47</td>
+                <td>30</td>
+                <td>27</td>
+                <td>12</td>
+                <td>9</td>
+                <td>0</td>
+                <td>3</td>
+                <td>25</td>
+                <td>16</td>
+                <td>23</td>
+                <td>11</td>
+                <td>6</td>
+                <td>5</td>
+                <td>0</td>
+                <td>22</td>
+                <td>14</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>4</td>
+                <td>LOGO</td>
+                <td>Atlético</td>
+                <td>48</td>
+                <td>23</td>
+                <td>15</td>
+                <td>3</td>
+                <td>5</td>
+                <td>45</td>
+                <td>25</td>
+                <td>34</td>
+                <td>12</td>
+                <td>11</td>
+                <td>1</td>
+                <td>0</td>
+                <td>27</td>
+                <td>12</td>
+                <td>14</td>
+                <td>11</td>
+                <td>4</td>
+                <td>2</td>
+                <td>5</td>
+                <td>18</td>
+                <td>13</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>5</td>
+                <td>LOGO</td>
+                <td>Athletic</td>
+                <td>45</td>
+                <td>23</td>
+                <td>13</td>
+                <td>6</td>
+                <td>4</td>
+                <td>42</td>
+                <td>21</td>
+                <td>29</td>
+                <td>12</td>
+                <td>9</td>
+                <td>2</td>
+                <td>1</td>
+                <td>31</td>
+                <td>12</td>
+                <td>16</td>
+                <td>11</td>
+                <td>4</td>
+                <td>4</td>
+                <td>3</td>
+                <td>11</td>
+                <td>9</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>6</td>
+                <td>LOGO</td>
+                <td>R. Sociedad</td>
+                <td>37</td>
+                <td>23</td>
+                <td>9</td>
+                <td>10</td>
+                <td>4</td>
+                <td>32</td>
+                <td>21</td>
+                <td>20</td>
+                <td>11</td>
+                <td>5</td>
+                <td>5</td>
+                <td>1</td>
+                <td>18</td>
+                <td>11</td>
+                <td>17</td>
+                <td>12</td>
+                <td>4</td>
+                <td>5</td>
+                <td>3</td>
+                <td>14</td>
+                <td>10</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>7</td>
+                <td>LOGO</td>
+                <td>R.Betis</td>
+                <td>35</td>
+                <td>23</td>
+                <td>8</td>
+                <td>11</td>
+                <td>4</td>
+                <td>26</td>
+                <td>25</td>
+                <td>23</td>
+                <td>12</td>
+                <td>6</td>
+                <td>5</td>
+                <td>1</td>
+                <td>16</td>
+                <td>9</td>
+                <td>12</td>
+                <td>11</td>
+                <td>2</td>
+                <td>6</td>
+                <td>3</td>
+                <td>10</td>
+                <td>16</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>8</td>
+                <td>LOGO</td>
+                <td>Valencia</td>
+                <td>35</td>
+                <td>23</td>
+                <td>10</td>
+                <td>5</td>
+                <td>8</td>
+                <td>29</td>
+                <td>27</td>
+                <td>23</td>
+                <td>11</td>
+                <td>7</td>
+                <td>2</td>
+                <td>2</td>
+                <td>15</td>
+                <td>6</td>
+                <td>12</td>
+                <td>12</td>
+                <td>3</td>
+                <td>3</td>
+                <td>6</td>
+                <td>14</td>
+                <td>21</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>9</td>
+                <td>LOGO</td>
+                <td>Las Palmas</td>
+                <td>32</td>
+                <td>23</td>
+                <td>9</td>
+                <td>5</td>
+                <td>9</td>
+                <td>23</td>
+                <td>20</td>
+                <td>18</td>
+                <td>11</td>
+                <td>5</td>
+                <td>3</td>
+                <td>3</td>
+                <td>14</td>
+                <td>9</td>
+                <td>14</td>
+                <td>12</td>
+                <td>4</td>
+                <td>2</td>
+                <td>6</td>
+                <td>9</td>
+                <td>11</td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>10</td>
+                <td>LOGO</td>
+                <td>Getafe</td>
+                <td>30</td>
+                <td>23</td>
+                <td>7</td>
+                <td>9</td>
+                <td>7</td>
+                <td>29</td>
+                <td>31</td>
+                <td>21</td>
+                <td>11</td>
+                <td>6</td>
+                <td>3</td>
+                <td>2</td>
+                <td>11</td>
+                <td>8</td>
+                <td>9</td>
+                <td>12</td>
+                <td>1</td>
+                <td>6</td>
+                <td>5</td>
+                <td>18</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>11
+                16	11	5	1	5	12	14	10	12	2	4	6	11	16</td>
+                <td>LOGO</td>
+                <td>Alavés</td>
+                <td>26</td>
+                <td>23</td>
+                <td>7</td>
+                <td>5</td>
+                <td>11</td>
+                <td>23</td>
+                <td>30</td>
+                <td>16</td>
+                <td>11</td>
+                <td>5</td>
+                <td>1</td>
+                <td>1</td>
+                <td>5</td>
+                <td>12</td>
+                <td>14</td>
+                <td>10</td>
+                <td>12</td>
+                <td>2</td>
+                <td>4</td>
+                <td>6</td>
+                <td>11</td>
             </tr>
             <tr>
                 <td></td>
@@ -522,7 +608,17 @@
             </tr>
         </tbody>
         <tfoot>
-
+            Champions League
+            Europa League
+            Conference League Qualifying
+            Descenso
+            PT: Puntos Totales
+            PJ: Partidos Jugados
+            PG: Partidos Ganados
+            PE: Partidos Empatados
+            PP: Partidos Perdidos
+            GF: Goles a favor
+            GC: Goles en contra
         </tfoot>
     </table>
 </body>
