@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" id="nombre">
+    <br>
+    <label for="apellidos">Apellidos</label>
+    <input type="text" name="apellidos" id="apellidos">
+    <br>
+    <label for="edad">Edad</label>
+    <input type="number" name="edad" id="edad" min="0" max="100" step="1">
+    <br>
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email">
+    <br>
+    <label for="navegador">Navegador Favorito</label>
+    <input type="text" name="navegador" id="navegador" list="op">
+
+    <datalist id="op">
+        <option value="Chrome"></option>
+        <option value="Firefox"></option>
+        <option value="Edge"></option>
+    </datalist>
+   
+
+</body>
+</html>

@@ -4,171 +4,616 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table{
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        thead{
+            border-bottom: solid 1px black;
+        }
+        tbody tr:first-child{
+            border-bottom: solid 2px red;
+        }
+        tbody tr:nth-child(even){
+            background-color: gainsboro;
+        }
+        .champions{
+            border-spacing: 0 0 1px;
+            border-left: solid 5px green;
+        }
+        .europa{
+            border-left: solid 5px yellow;
+        }
+        .conference{
+            border-left: solid 5px rgb(185, 185, 13);
+        }
+        .descenso{
+            border-left: solid 5px red;
+        }
+        tfoot tr{
+            text-align: left;
+        }
+        .separacion{
+            height: 20px;
+        }
+
+    </style>
 </head>
-<style>
-    caption{
-        text-align: left;
-        background-color:rgba(231, 197, 152, 0.911) ;
-        font-weight: bold;
-        font-size: 150%;
-    }
-    table{
-        background-color:rgba(231, 197, 152, 0.911);
-        border-collapse: collapse;
-        border: solid 5px rgba(231, 197, 152, 0.911);
-    }
-    th{
-        background-color: white;
-    }
-    td{
-        padding: 8px;
-    }
-    tbody tr td:first-child{
-        font-weight: bold;
-    }
-    tr:nth-child(even){
-        background-color: antiquewhite;
-    }
-    td:hover{
-        background-color: gray;
-    }
-    tr:hover,td:hover{
-        border: solid 2px;
-  
-    }
-    .verde{
-        color: rgb(73, 107, 22);
-    }
-    .rojo{
-        color: red;
-    }
-</style>
 <body>
     <table>
         <thead>
-            <caption>Indice<hr></caption>
-            <th>Indice</th>
-            <th>Ultimo</th>
-            <th>Var.%Var.</th>
-            <th>Max</th>
-            <th>Min</th>
-            <th>Volumen</th>
-            <th>Capital</th>
-            <th>Hora</th>
+            <th colspan="3"></th>
+            <th colspan="7">TOTALES</th>
+            <th colspan="7">EN CASA</th>
+            <th colspan="7">FUERA</th>
         </thead>
         <tbody>
             <tr>
-                <td>IBEX 35</td>
-                <td>9.234,6</td>
-                <td class="verde">+0,43 +39,30</td>
-                <td>9.845,2</td>
-                <td>9.256,2</td>
-                <td></td>
-                <td>604.533</td>
-                <td>09:19</td>
+                <td colspan="3">EQUIPOS</td>
+                <td>PT</td>
+                <td>PJ</td>
+                <td>PG</td>
+                <td>PE</td>
+                <td>PP</td>
+                <td>GF</td>
+                <td>GC</td>
+                <td>PT</td>
+                <td>PJ</td>
+                <td>PG</td>
+                <td>PE</td>
+                <td>PP</td>
+                <td>GF</td>
+                <td>GC</td>
+                <td>PT</td>
+                <td>PJ</td>
+                <td>PG</td>
+                <td>PE</td>
+                <td>PP</td>
+                <td>GF</td>
+                <td>GC</td>
             </tr>
             <tr>
-                <td>FTSE 100</td>
-                <td>7.435,17</td>
-                <td class="verde">+0,26 +20,46</td>
-                <td>7.932,5</td>
-                <td>7.857,66</td>
-                <td></td>
-                <td></td>
-                <td>08/02</td>
+                <td class="champions">1</td>
+                <td><div><img src="../ejercicio05/img/rma.png" height="25px"  alt="Madrid"></div></td>
+                <td>R. Madrid</td>
+                <td>58</td>
+                <td>23</td>
+                <td>18</td>
+                <td>4</td>
+                <td>1</td>
+                <td>48</td>
+                <td>15</td>
+                <td>29</td>
+                <td>11</td>
+                <td>9</td>
+                <td>2</td>
+                <td>0</td>
+                <td>26</td>
+                <td>7</td>
+                <td>29</td>
+                <td>12</td>
+                <td>9</td>
+                <td>2</td>
+                <td>1</td>
+                <td>22</td>
+                <td>8</td>
             </tr>
             <tr>
-                <td>DAX 30</td>
-                <td>15.363,73</td>
-                <td class="verde">+1,13 +174,68</td>
-                <td>15.634,11</td>
-                <td>15.573,5</td>
-                <td></td>
-                <td>1.295.163</td>
-                <td>09:17</td>
+                <td class="champions">2</td>
+                <td><div><img src="../ejercicio05/img/gir.png" height="25px"  alt="Girona"></td>
+                <td>Girona</td>
+                <td>56</td>
+                <td>23</td>
+                <td>17</td>
+                <td>5</td>
+                <td>1</td>
+                <td>52</td>
+                <td>25</td>
+                <td>29</td>
+                <td>12</td>
+                <td>9</td>
+                <td>2</td>
+                <td>1</td>
+                <td>30</td>
+                <td>14</td>
+                <td>27</td>
+                <td>11</td>
+                <td>8</td>
+                <td>3</td>
+                <td>0</td>
+                <td>22</td>
+                <td>11</td>
             </tr>
             <tr>
-                <td>CAC 40</td>
-                <td>7.119,83</td>
-                <td class="rojo">-0,18 -12,52</td>
-                <td>7.190,86</td>
-                <td>7.119,83</td>
-                <td></td>
-                <td>2.322.652</td>
-                <td>08/02</td>
+                <td class="champions">3</td>
+                <td><div><img src="../ejercicio05/img/fcb.png" height="25px"  alt="Barcelona"></td>
+                <td>Barcelona</td>
+                <td>50</td>
+                <td>23</td>
+                <td>15</td>
+                <td>5</td>
+                <td>3</td>
+                <td>47</td>
+                <td>30</td>
+                <td>27</td>
+                <td>12</td>
+                <td>9</td>
+                <td>0</td>
+                <td>3</td>
+                <td>25</td>
+                <td>16</td>
+                <td>23</td>
+                <td>11</td>
+                <td>6</td>
+                <td>5</td>
+                <td>0</td>
+                <td>22</td>
+                <td>14</td>
             </tr>
             <tr>
-                <td>FTSE MIB</td>
-                <td>27.160,73</td>
-                <td class="verde">+0,15 +41,99</td>
-                <td>27.377,01</td>
-                <td>27.160,73</td>
-                <td></td>
-                <td></td>
-                <td>08/02</td>                
+                <td class="champions">4</td>
+                <td><div><img src="../ejercicio05/img/atm.png" height="25px"  alt="AtMadrid"></td>
+                <td>Atlético</td>
+                <td>48</td>
+                <td>23</td>
+                <td>15</td>
+                <td>3</td>
+                <td>5</td>
+                <td>45</td>
+                <td>25</td>
+                <td>34</td>
+                <td>12</td>
+                <td>11</td>
+                <td>1</td>
+                <td>0</td>
+                <td>27</td>
+                <td>12</td>
+                <td>14</td>
+                <td>11</td>
+                <td>4</td>
+                <td>2</td>
+                <td>5</td>
+                <td>18</td>
+                <td>13</td>
             </tr>
             <tr>
-               <td>EURO STOXX 50</td>
-               <td>4.252,24</td>
-               <td class="verde">+1,02 +43,09</td>
-               <td>4.255,55</td>
-               <td>4.226,85</td>
-               <td></td>
-               <td>4.476.431</td>
-               <td>09:17</td>
+                <td class="europa">5</td>
+                <td><div><img src="../ejercicio05/img/ath.png" height="25px"  alt="Bilbao"></td>
+                <td>Athletic</td>
+                <td>45</td>
+                <td>23</td>
+                <td>13</td>
+                <td>6</td>
+                <td>4</td>
+                <td>42</td>
+                <td>21</td>
+                <td>29</td>
+                <td>12</td>
+                <td>9</td>
+                <td>2</td>
+                <td>1</td>
+                <td>31</td>
+                <td>12</td>
+                <td>16</td>
+                <td>11</td>
+                <td>4</td>
+                <td>4</td>
+                <td>3</td>
+                <td>11</td>
+                <td>9</td>
             </tr>
             <tr>
-                <td>DOW JONES 30</td>
-                <td>33.949,01</td>
-                <td class="rojo">-0,61 -207,68</td>
-                <td>34.161,65</td>
-                <td>33.899,79</td>
-                <td>324.091.488</td>
-                <td></td>
-                <td>08/02</td>
+                <td class="conference">6</td>
+                <td><div><img src="../ejercicio05/img/rso.png" height="25px"  alt="R.Sociedad"></td>
+                <td>R. Sociedad</td>
+                <td>37</td>
+                <td>23</td>
+                <td>9</td>
+                <td>10</td>
+                <td>4</td>
+                <td>32</td>
+                <td>21</td>
+                <td>20</td>
+                <td>11</td>
+                <td>5</td>
+                <td>5</td>
+                <td>1</td>
+                <td>18</td>
+                <td>11</td>
+                <td>17</td>
+                <td>12</td>
+                <td>4</td>
+                <td>5</td>
+                <td>3</td>
+                <td>14</td>
+                <td>10</td>
             </tr>
             <tr>
-                <td>S&P 500</td>
-                <td>4.117,86</td>
-                <td class="rojo">-1,11 -46,14</td>
-                <td>4.156.85</td>
-                <td>4.111,67</td>
-                <td>2.543.426.560</td>
-                <td></td>
-                <td>08/02</td>
+                <td>7</td>
+                <td><div><img src="../ejercicio05/img/bet.png" height="25px"  alt="Betis"></td>
+                <td>R.Betis</td>
+                <td>35</td>
+                <td>23</td>
+                <td>8</td>
+                <td>11</td>
+                <td>4</td>
+                <td>26</td>
+                <td>25</td>
+                <td>23</td>
+                <td>12</td>
+                <td>6</td>
+                <td>5</td>
+                <td>1</td>
+                <td>16</td>
+                <td>9</td>
+                <td>12</td>
+                <td>11</td>
+                <td>2</td>
+                <td>6</td>
+                <td>3</td>
+                <td>10</td>
+                <td>16</td>
             </tr>
             <tr>
-                <td>NASDAQ</td>
-                <td>11.910,52</td>
-                <td class="rojo">-1,68 -203,27</td>
-                <td>12.096,39</td>
-                <td>11.890,09</td>
-                <td></td>
-                <td>13.354.548</td>
-                <td>08/02</td>
+                <td>8</td>
+                <td><div><img src="../ejercicio05/img/val.png" height="25px"  alt="Valencia"></td>
+                <td>Valencia</td>
+                <td>35</td>
+                <td>23</td>
+                <td>10</td>
+                <td>5</td>
+                <td>8</td>
+                <td>29</td>
+                <td>27</td>
+                <td>23</td>
+                <td>11</td>
+                <td>7</td>
+                <td>2</td>
+                <td>2</td>
+                <td>15</td>
+                <td>6</td>
+                <td>12</td>
+                <td>12</td>
+                <td>3</td>
+                <td>3</td>
+                <td>6</td>
+                <td>14</td>
+                <td>21</td>
             </tr>
             <tr>
-                <td>NASDAQ 100</td>
-                <td>12.495,38</td>
-                <td class="rojo">-1,83 -232,90</td>
-                <td>12.709,45</td>
-                <td>12.471,12</td>
-                <td></td>
-                <td>9.378.658</td>
-                <td>08/02</td>
+                <td>9</td>
+                <td><div><img src="../ejercicio05/img/lpa.png" height="25px"  alt="Palmas"></td>
+                <td>Las Palmas</td>
+                <td>32</td>
+                <td>23</td>
+                <td>9</td>
+                <td>5</td>
+                <td>9</td>
+                <td>23</td>
+                <td>20</td>
+                <td>18</td>
+                <td>11</td>
+                <td>5</td>
+                <td>3</td>
+                <td>3</td>
+                <td>14</td>
+                <td>9</td>
+                <td>14</td>
+                <td>12</td>
+                <td>4</td>
+                <td>2</td>
+                <td>6</td>
+                <td>9</td>
+                <td>11</td>
             </tr>
             <tr>
-                <td>DJ STOXX 50</td>
-                <td>3.917,14</td>
-                <td class="verde">+0,74 +28,82</td>
-                <td>3.920,87</td>
-                <td>3.898,34</td>
-                <td></td>
-                <td></td>
-                <td>09:17</td>
+                <td>10</td>
+                <td><div><img src="../ejercicio05/img/get.png" height="25px"  alt="Getafe"></td>
+                <td>Getafe</td>
+                <td>30</td>
+                <td>23</td>
+                <td>7</td>
+                <td>9</td>
+                <td>7</td>
+                <td>29</td>
+                <td>31</td>
+                <td>21</td>
+                <td>11</td>
+                <td>6</td>
+                <td>3</td>
+                <td>2</td>
+                <td>11</td>
+                <td>8</td>
+                <td>9</td>
+                <td>12</td>
+                <td>1</td>
+                <td>6</td>
+                <td>5</td>
+                <td>18</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><div><img src="../ejercicio05/img/ala.png" height="25px"  alt="Alavés"></td>
+                <td>Alavés</td>
+                <td>26</td>
+                <td>23</td>
+                <td>7</td>
+                <td>5</td>
+                <td>11</td>
+                <td>23</td>
+                <td>30</td>
+                <td>16</td>
+                <td>11</td>
+                <td>5</td>
+                <td>1</td>
+                <td>5</td>
+                <td>12</td>
+                <td>14</td>
+                <td>10</td>
+                <td>12</td>
+                <td>2</td>
+                <td>4</td>
+                <td>6</td>
+                <td>11</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><div><img src="../ejercicio05/img/osa.png" height="25px"  alt="Osasuna"></td>
+                <td>Osasuna</td>
+                <td>26</td>
+                <td>23</td>
+                <td>7</td>
+                <td>5</td>
+                <td>11</td>
+                <td>26</td>
+                <td>36</td>
+                <td>15</td>
+                <td>12</td>
+                <td>4</td>
+                <td>3</td>
+                <td>5</td>
+                <td>12</td>
+                <td>17</td>
+                <td>11</td>
+                <td>11</td>
+                <td>3</td>
+                <td>2</td>
+                <td>6</td>
+                <td>14</td>
+                <td>19</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><div><img src="../ejercicio05/img/rva.png" height="25px"  alt="Rayo"></td>
+                <td>Rayo</td>
+                <td>24</td>
+                <td>23</td>
+                <td>5</td>
+                <td>9</td>
+                <td>9</td>
+                <td>20</td>
+                <td>30</td>
+                <td>8</td>
+                <td>11</td>
+                <td>1</td>
+                <td>5</td>
+                <td>5</td>
+                <td>10</td>
+                <td>20</td>
+                <td>16</td>
+                <td>12</td>
+                <td>4</td>
+                <td>4</td>
+                <td>4</td>
+                <td>10</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td><div><img src="../ejercicio05/img/vil.png" height="25px"  alt="Villarreal"></td>
+                <td>Villarreal</td>
+                <td>24</td>
+                <td>23</td>
+                <td>6</td>
+                <td>6</td>
+                <td>11</td>
+                <td>33</td>
+                <td>45</td>
+                <td>12</td>
+                <td>12</td>
+                <td>3</td>
+                <td>3</td>
+                <td>6</td>
+                <td>18</td>
+                <td>22</td>
+                <td>12</td>
+                <td>11</td>
+                <td>3</td>
+                <td>3</td>
+                <td>5</td>
+                <td>15</td>
+                <td>23</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td><div><img src="../ejercicio05/img/sfc.png" height="25px"  alt="Sevilla"></td>
+                <td>Sevilla</td>
+                <td>20</td>
+                <td>23</td>
+                <td>4</td>
+                <td>8</td>
+                <td>11</td>
+                <td>29</td>
+                <td>37</td>
+                <td>11</td>
+                <td>12</td>
+                <td>2</td>
+                <td>5</td>
+                <td>5</td>
+                <td>16</td>
+                <td>19</td>
+                <td>9</td>
+                <td>11</td>
+                <td>2</td>
+                <td>3</td>
+                <td>6</td>
+                <td>13</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td><div><img src="../ejercicio05/img/cel.png" height="25px"  alt="Celta"></td>
+                <td>Celta</td>
+                <td>20</td>
+                <td>23</td>
+                <td>4</td>
+                <td>8</td>
+                <td>11</td>
+                <td>24</td>
+                <td>32</td>
+                <td>10</td>
+                <td>12</td>
+                <td>2</td>
+                <td>4</td>
+                <td>6</td>
+                <td>8</td>
+                <td>15</td>
+                <td>10</td>
+                <td>11</td>
+                <td>2</td>
+                <td>4</td>
+                <td>5</td>
+                <td>16</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>17</td>
+                <td><div><img src="../ejercicio05/img/mll.png" height="25px"  alt="Mallorca"></td>
+                <td>Mallorca</td>
+                <td>20</td>
+                <td>23</td>
+                <td>3</td>
+                <td>11</td>
+                <td>9</td>
+                <td>19</td>
+                <td>30</td>
+                <td>13</td>
+                <td>11</td>
+                <td>2</td>
+                <td>7</td>
+                <td>2</td>
+                <td>9</td>
+                <td>9</td>
+                <td>7</td>
+                <td>12</td>
+                <td>1</td>
+                <td>4</td>
+                <td>7</td>
+                <td>10</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td class="descenso">18</td>
+                <td><div><img src="../ejercicio05/img/cad.png" height="25px"  alt="Cádiz"></td>
+                <td>Cádiz</td>
+                <td>17</td>
+                <td>23</td>
+                <td>2</td>
+                <td>11</td>
+                <td>10</td>
+                <td>15</td>
+                <td>31</td>
+                <td>12</td>
+                <td>11</td>
+                <td>2</td>
+                <td>6</td>
+                <td>3</td>
+                <td>9</td>
+                <td>13</td>
+                <td>5</td>
+                <td>12</td>
+                <td>0</td>
+                <td>5</td>
+                <td>7</td>
+                <td>6</td>
+                <td>18</td>
+            </tr>
+            <tr>
+                <td class="descenso">19</td>
+                <td><div><img src="../ejercicio05/img/gra.png" height="25px"  alt="Granada"></td>
+                <td>Granada</td>
+                <td>12</td>
+                <td>23</td>
+                <td>2</td>
+                <td>6</td>
+                <td>15</td>
+                <td>23</td>
+                <td>45</td>
+                <td>11</td>
+                <td>12</td>
+                <td>2</td>
+                <td>5</td>
+                <td>5</td>
+                <td>15</td>
+                <td>21</td>
+                <td>1</td>
+                <td>11</td>
+                <td>0</td>
+                <td>1</td>
+                <td>10</td>
+                <td>8</td>
+                <td>24</td>
+            </tr>
+            <tr>
+                <td class="descenso">20</td>
+                <td><div><img src="../ejercicio05/img/alm.png" height="25px"  alt="Almería"></td>
+                <td>Almería</td>
+                <td>6</td>
+                <td>23</td>
+                <td>0</td>
+                <td>6</td>
+                <td>17</td>
+                <td>22</td>
+                <td>51</td>
+                <td>5</td>
+                <td>11</td>
+                <td>0</td>
+                <td>5</td>
+                <td>6</td>
+                <td>10</td>
+                <td>21</td>
+                <td>1</td>
+                <td>12</td>
+                <td>0</td>
+                <td>1</td>
+                <td>11</td>
+                <td>12</td>
+                <td>30</td>
             </tr>
         </tbody>
-
+        <tfoot>
+            <tr class="separacion" colspan="2"></tr>
+            <tr>
+                <td class="champions" colspan="2">&nbsp;Champions League</td>
+                <td class="europa" colspan="2">&nbsp;Europa League</td>
+                <td class="conference" colspan="2">&nbsp;Conference League</td>
+                <td class="descenso" colspan="2">&nbsp;Descenso</td>
+                <td class="resumen" colspan="2"><strong>PT:</strong> Puntos Totales</td>
+                <td class="resumen" colspan="2"><strong>PJ:</strong> Partidos Jugados</td>
+            </tr>
+            
+            <tr>
+                <td class="resumen" colspan="2"><strong>PG:</strong> Partidos Ganados</td>
+                <td class="resumen" colspan="2"><strong>PE:</strong> Partidos Empatados</td>
+                <td class="resumen" colspan="2"><strong>PP:</strong> Partidos Perdidos</td>
+                <td class="resumen" colspan="2"><strong>GF:</strong> Goleo a favor</td>
+                <td class="resumen" colspan="2"><strong>GC:</strong> Goleo en contra</td>
+            </tr>
+        </tfoot>
     </table>
 </body>
 </html>
