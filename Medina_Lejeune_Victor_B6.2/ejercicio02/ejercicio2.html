@@ -3,71 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ejercicio2</title>
 </head>
 <body>
-    <label for="nombre">Nombre</label>
-    <input type="text" id="nombre" name="nombre">
-    <br>
-    <label for="apellidos">Apellidos</label>
-    <input type="text" id="apellidos" name="apellidos">
-    <br>
-    <label for="pass">Contraseña</label>
-    <input type="password" name="pass" id="pass">
-    <br>
-    <label for="pass">Repetir contraseña</label>
-    <input type="password" name="pass" id="pass">
-    <br>
-    <label for="sexoH">Hombre</label>
-    <input type="radio" name="sexoH">
-    <label for="sexoM">Mujer</label>
-    <input type="radio" name="sexoM">
-    <br>
-    <label for="fechaNacimiento"></label>
-    <input type="date" name="fechaNacimiento" min="1900-01-01" max="2024-12-31">
-    <br>
-    
-    Aficiones
-    <br>
-    <input type="checkbox" name="Videojuegos" value="vdj">
-    <label for="Videojuegos">Videojuegos</label>
-    <br>
-    <input type="checkbox" name="Futbol" value="fut">
-    <label for="Futbol">Futbol</label>
-    <br>
-    <input type="checkbox" name="Videos" value="videos">
-    <label for="Videos">Ver videos(YT,Twitch)</label>
-    <br>
-    <input type="checkbox" name="leer" value="leer">
-    <label for="leer">Leer</label>
-    <br>
-    <input type="checkbox" value="Dibujar" name="Dibujar">
-    <label for="Dibujar">Dibujar</label>
-    <br>
-    <input type="checkbox" name="Baloncesto" value="blc">
-    <label for="Baloncesto">Baloncesto</label>
-    <br>
-    <input type="checkbox" name="Gim" value="Gim">
-    <label for="Gim">Gimnasio</label>
-    <br>
-    <input type="checkbox" name="Peliculas" value="pelis">
-    <label for="Peliculas">Ver Peliculas</label>
-    <br>
-    <input type="checkbox" name="series" value="series">
-    <label for="series">Ver series</label>
-    <br>
-    <input type="checkbox" name="Programar" id="prog">
-    <label for="Programar">Programar</label>
-    <br>
-    <input type="checkbox" name="Salir" value="Salir">
-    <label for="Salir">Quedar con amigos</label>
-    <br>
-    <input type="checkbox" name="Discotecas" value="disct">
-    <label for="Discotecas">Ir a Discotecas</label>
-    <br>
-    <input type="image" src="../ejercicio02/img/2343795.png" name="Enviar" alt="Enviar" width="5%">
-    
-    
-    <br>    
+    <h1>Formulario de Registro</h1>
+    <form action="#" method="POST">
+        <label for="nombre_apellidos">Nombre y Apellidos:</label><br>
+        <input type="text" id="nombre_apellidos" name="nombre_apellidos" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="usuario">Nombre de Usuario:</label><br>
+        <input type="text" id="usuario" name="usuario" required><br><br>
+
+        <label for="contrasena">Contraseña:</label><br>
+        <input type="password" id="contrasena" name="contrasena" required><br><br>
+
+        <label for="repetir_contrasena">Repetir Contraseña:</label><br>
+        <input type="password" id="repetir_contrasena" name="repetir_contrasena" required><br><br>
+
+        <label for="sexo">Sexo:</label><br>
+        <input type="radio" id="sexo" name="sexo" value="masculino" required> Masculino
+        <input type="radio" id="sexo" name="sexo" value="femenino" required> Femenino<br><br>
+
+        <label for="fecha_nacimiento">Fecha de Nacimiento:</label><br>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br><br>
+
+        <label for="aficiones">Aficiones:</label><br>
+        <input type="checkbox" name="Futbol" value="fut">
+        <label for="Futbol">Futbol</label>
+        <br>
+        <input type="checkbox" name="Videos" value="videos">
+        <label for="Videos">Ver videos(YT,Twitch)</label>
+        <br>
+        <input type="checkbox" name="leer" value="leer">
+        <label for="leer">Leer</label>
+        <br>
+        <input type="checkbox" value="Dibujar" name="Dibujar">
+        <label for="Dibujar">Dibujar</label>
+        <br>
+        <input type="checkbox" name="Baloncesto" value="blc">
+        <label for="Baloncesto">Baloncesto</label>
+        <br>
+        <input type="checkbox" name="Gim" value="Gim">
+        <label for="Gim">Gimnasio</label>
+        <br>
+        <input type="checkbox" name="Peliculas" value="pelis">
+        <label for="Peliculas">Ver Peliculas</label>
+        <br>
+        <input type="checkbox" name="series" value="series">
+        <label for="series">Ver series</label>
+        <br>
+        <input type="checkbox" name="Programar" id="prog">
+        <label for="Programar">Programar</label>
+        <br>
+        <input type="checkbox" name="Salir" value="Salir">
+        <label for="Salir">Quedar con amigos</label>
+        <br>
+        <input type="checkbox" name="Discotecas" value="disct">
+        <label for="Discotecas">Ir a Discotecas</label>
+        <!-- Agrega más aficiones según sea necesario -->
+        <br><br>
+
+        <input type="image" src="../ejercicio02/img/2343795.png" width="5%" alt="Enviar">
+    </form>
+</body>
+</html>
 </body>
 </html>

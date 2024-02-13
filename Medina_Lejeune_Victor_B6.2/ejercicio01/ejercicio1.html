@@ -3,31 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ejercicio1</title>
 </head>
 <body>
+    <h1>Formulario de Datos</h1>
+    <form action="#" method="POST">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
 
-    <label for="nombre">Nombre</label>
-    <input type="text" name="nombre" id="nombre">
-    <br>
-    <label for="apellidos">Apellidos</label>
-    <input type="text" name="apellidos" id="apellidos">
-    <br>
-    <label for="edad">Edad</label>
-    <input type="number" name="edad" id="edad" min="0" max="100" step="1">
-    <br>
-    <label for="email">Email</label>
-    <input type="email" name="email" id="email">
-    <br>
-    <label for="navegador">Navegador Favorito</label>
-    <input type="text" name="navegador" id="navegador" list="op">
+        <label for="apellidos">Apellidos:</label><br>
+        <input type="text" id="apellidos" name="apellidos" required><br><br>
 
-    <datalist id="op">
-        <option value="Chrome"></option>
-        <option value="Firefox"></option>
-        <option value="Edge"></option>
-    </datalist>
-   
+        <label for="edad">Edad:</label><br>
+        <input type="number" id="edad" name="edad" required><br><br>
 
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="navegador">Mi navegador favorito:</label><br>
+        <select id="navegador" name="navegador" required>
+            <option value="Chrome">Chrome</option>
+            <option value="Firefox">Firefox</option>
+            <option value="Safari">Safari</option>
+            <option value="Edge">Edge</option>
+            <option value="Otro">Otro</option>
+        </select><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
 </body>
 </html>
