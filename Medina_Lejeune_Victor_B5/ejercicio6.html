@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>NoMePongoEsoNiLoc@</title>
+		<meta charset="UTF-8">
+		<link href="https://fonts.googleapis.com/css?family=Lacquer&display=swap" rel="stylesheet">
+	</head>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		body{
+			background-color: #FF6F61;
+		}
+
+		h1,h2{
+			color:white;
+			text-align: center;
+			width: 80%;
+			margin: 1% auto;
+			font-family: 'Lacquer';
+			font-style: italic;
+		}
+
+		form{
+			width: 80%;
+			border: 5px solid yellow;
+			margin: 0 auto;
+			background-color: #FE840E;
+			color:white;
+			font-family: Arial;
+			padding:1%;
+
+			display: flex;	
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+		}
+
+		fieldset{
+			border: 1px solid yellow;
+			margin:1% 0;
+		}
+
+		fieldset, legend{
+			transition: background-color 1s,color 1s;
+		}
+
+		.elegir{
+			flex: 100% 0 0;
+		}
+		.tiposDisfraces{
+			display: flex;
+			width: 100%;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		.columna{
+			flex: 25% 0 0;
+			margin-bottom: 1%;
+		}
+
+		.datos, .pago{
+			flex: 49% 0 0;
+			height: 175px;
+		}
+
+		input[type="checkbox"]:checked+label.tipo{
+			color:yellow;
+		}
+		
+		input:focus, textarea:focus{
+			color:#FF6F61;
+			border: 1px solid #FF6F61;
+			outline: none;
+		}
+
+		hr{
+			margin-top: 2%;
+			color: yellow;	
+		}
+		table{
+			width: 65%;
+			margin: 1% auto;
+			border-collapse: collapse;
+			caption-side: top;
+
+			background-color: #FE840E;
+			border: 5px solid yellow;
+
+			color:white;
+			font-family: Arial;
+		}
+
+		caption{
+			color:white;
+			text-align: center;	
+			margin: 1% 0;
+			font-family: 'Lacquer';
+			font-style: italic;
+			font-size: 1.5em;
+
+		}
+
+		td,th{
+			border: 1px solid yellow;
+			padding: 1%;
+			width: 15%;
+			text-align: center;
+			vertical-align: middle;
+		}
+
+		td:first-child, th:first-child{
+			width: 55%;
+		}
+
+		tfoot td{
+			font-size: 0.7em;
+			text-align: left;
+		}
+
+
+	</style>
+	<body>
+		<h1>NoMePongoEsoNiLoc@</h1>
+		<h2>Alquiler online de disfraces</h2>
+		<form name="alquilar" enctype="text/plain" method="POST" action="">
+			<fieldset class="elegir">
+				<legend>Elija su disfraz</legend>
+				<label for="alquiler">¿Qué tipo de alquiler desea?</label>
+				<select id="alquiler" name="alquiler" required>
+					<option value="1">Completo</option>
+					<option value="2">Máscara</option>			
+					<option value="3">Traje</option>
+				</select><br><br>
+				<label for="genero">Indique su género</label>
+				<input type="radio" id="genero" name="genero" value="hombre" required>Hombre
+				<input type="radio" id="genero" name="genero" value="mujer" required>Mujer
+				<input type="radio" id="genero" name="genero" value="noBinario" required>No binario<br><br>
+				<label for="fechaReserva">Inicio de la reserva</label>
+				<input type="datetime-local" name="fechaReserva" id="fechaReserva">
+				<label for="fechaFin">Fin de la reserva</label>
+				<input type="datetime-local" name="fechaFin" id="fechaFin"><br><br>
+				<label for="tematica">¿Qué temática de disfraz desea alquilar?</label><br><br>
+				<div class="tiposDisfraces">
+					<div class="columna">
+						<input type="checkbox" id="tipo1" name="tipo1" value="1"><label class="tipo" for="tipo1">Animales</label><br>
+						<input type="checkbox" id="tipo2" name="tipo2" value="2"><label class="tipo" for="tipo2">Profesiones</label><br>
+						<input type="checkbox" id="tipo3" name="tipo3" value="3"><label class="tipo" for="tipo3">Deportes</label><br>
+					</div>
+					<div class="columna">	
+						<input type="checkbox" id="tipo4" name="tipo4" value="4"><label class="tipo" for="tipo4">Plantas</label><br>
+						<input type="checkbox" id="tipo5" name="tipo5" value="5"><label class="tipo" for="tipo5">Personajes de películas</label><br>
+						<input type="checkbox" id="tipo6" name="tipo6" value="6"><label class="tipo" for="tipo6">Personajes de libros</label><br>
+					</div>
+					<div class="columna">
+						<input type="checkbox" id="tipo7" name="tipo7" value="7"><label class="tipo" for="tipo7">Personajes de dibujos animados</label><br>
+						<input type="checkbox" id="tipo8" name="tipo8" value="8"><label class="tipo" for="tipo8">Personajes históricos</label><br>
+						<input type="checkbox" id="tipo9" name="tipo9" value="9"><label class="tipo" for="tipo9">Objetos cotidianos</label><br>
+					</div>
+					<div class="columna">	
+						<input type="checkbox" id="tipo10" name="tipo10" value="10"><label class="tipo" for="tipo10">Vehículos</label><br>
+						<input type="checkbox" id="tipo11" name="tipo11" value="11"><label class="tipo" for="tipo11">Otras culturas</label><br>
+						<input type="checkbox" id="tipo12" name="tipo12" value="12"><label class="tipo" for="tipo12">Inclasificables</label><br>
+					</div>
+				</div>
+				
+				<label for="peticion">¿Desea indicarnos alguna petición especial?</label><br>
+				<textarea id="peticion" name="peticion" rows="5" cols="35"></textarea>
+
+			</fieldset>
+			<fieldset class="datos">
+				<legend>Indique sus datos personales</legend>
+				<label for="nombre">Nombre y apellidos</label>
+				<input type="text" name="nombre" id="nombre" maxlength="50" size="25" required placeholder="Nombre y apellidos"><br><br>
+				<label for="correo">Correo Electrónico</label>
+				<input type="email" name="correo" id="correo" maxlength="50" size="50" required placeholder="NoMePongoEsoNiLoc@disfraces.com"><br><br>
+				<label for="codpostal">Código Postal</label>
+				<input type="text" name="codpostal" id="codpostal" maxlength="5" size="5" pattern="[0-9]{5}" required placeholder="41024"><br><br>
+				<label for="tlf">Teléfono de contacto</label>
+				<input type="text" name="tlf" id="tlf" maxlength="9" size="9" pattern="[0-9]{9}" required placeholder="954123123"><br>
+
+			</fieldset>
+			<fieldset class="pago">
+				<legend>Indique sus datos de pago</legend>
+				<label for="tarjeta">Número de tarjeta</label>
+				<input type="text" name="tarjeta" id="tarjeta" maxlength="16" size="16" pattern="[0-9]{16}"required placeholder="16 cifras sin espacios"><br><br>
+				<label for="fcad">Fecha de Caducidad</label>
+				<input type="month" name="fcad" id="fcad"><br><br>
+				<label for="ccv">Código de Seguridad (CCV)</label>
+				<input type="password" name="ccv" id="ccv" maxlength="3" size="3" pattern="[0-9]{3}" required placeholder="123"><br><br>
+			</fieldset>
+			
+			<p>
+				<input type="submit" value="Solicitar Reserva">
+				<input type="reset" value="Borrar datos">
+			</p>
+		</form>
+
+		<hr />
+
+		<table>
+			<caption>Tarifas 2022</caption>
+			<thead>
+				<tr>
+					<th>Categoría</th>
+					<th>Traje</th>
+					<th>Máscara</th>
+					<th>Completo</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Animales, plantas, objetos</td>
+					<td>15€</td>
+					<td>15€</td>
+					<td>25€</td>
+				</tr>
+				<tr>
+					<td>Personas y personajes</td>
+					<td>10€</td>
+					<td>10€</td>
+					<td>15€</td>
+				</tr>
+				<tr>
+					<td>Vehículos</td>
+					<td>15€</td>
+					<td>15€</td>
+					<td>25€</td>
+				</tr>
+				<tr>
+					<td>Inclasificables</td>
+					<td>20€</td>
+					<td>20€</td>
+					<td>35€</td>
+				</tr>
+				<tr>
+					<td rowspan="2">Envío</td>
+					<td colspan="3">Península: 10€.</td>			
+				</tr>
+				<tr>			
+					<td colspan="3">Otros destinos: consultar</td>			
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="4">NOTA: Todos los precios son por día de alquiler, incluyen IVA, servicio de limpieza y desinfección. Envío no incluido</td>
+				</tr>
+			</tfoot>
+		</table>
+	</body>
+</html>
