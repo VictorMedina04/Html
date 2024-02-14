@@ -3,92 +3,27 @@
 <head> 
 	<title>Ejercicio 3 - Formulario de alta</title> 
 	<meta charset="utf-8" /> 
-    <style type="text/css"> 
-		main {
-			margin: 50px auto;
-			width: 70%;
-		}
-		fieldset {
-			border: 1px solid #ccc;
-			padding: 10px;
-			margin-bottom: 20px;
-			background-color: #fff;
-			transition: background-color 0.3s;
-		}
+	<style type="text/css"> 
+	fieldset{
+		width: 30%;
+	}
 
-		fieldset:hover {
-			background-color: #FF9;
-		}
+	.asa{
+		display: flex;
+		flex-wrap: wrap;
+		width: 50%;
+	}
 
-		input[type="text"]:focus,
-		select:focus {
-			border: 1px solid #E6B700;
-		}
-
-		label,
-		.ayuda {
-			display: block;
-			margin-bottom: 5px;
-		}
-
-		.titulo {
-			font-weight: bold;
-		}
-
-		.requerido {
-			color: red;
-		}
-        form {
-        border: 1px solid #ccc;
-        padding: 20px;
-        border-radius: 5px;
-        }
-        fieldset {
-        margin-bottom: 20px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        }
-        label {
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-        }
-
-        /* Style the input fields */
-        input[type="text"],
-        input[type="email"],
-        input[type="tel"],
-        select {
-        width: 100%;
-        padding: 5px;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-        margin-bottom: 10px;
-        }
-        input[type="submit"] {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        }
-        .ayuda {
-        font-size: smaller;
-        color: #999;
-        margin-bottom: 15px;
-        }
-        .requerido {
-        color: red;
-        }
-
-	</style>
+	div input{
+		display: block;
+	}
+	</style> 
 </head> 
 <body> 
 <main>
 	<h2>Formulario de alta</h2> 
-	<form method="post" action="#"> 		
+	<form method="post" action="#"> 	
+		<div class="asa">
 		<fieldset> 
 			<label class="titulo" for="nombre">Nombre y apellidos <span class="requerido">*</span></label> 
 			<div> 
@@ -152,6 +87,7 @@
 			</div> 
 			<p class="ayuda">Sin prefijo de país y sin espacios en blanco</p> 
 		</fieldset> 
+	</div>	
 		<fieldset> 
 			<input id="alta" type="submit" value="Darme de alta &rarr;" /> 
 		</fieldset> 		

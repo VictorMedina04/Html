@@ -1,98 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio5</title>
+    <title>Ejercicio 5</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
+        span {
+            color: red;
+        }
+
+        fieldset {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        input[type="number"],
-        input[type="date"],
-        input[type="email"],
-        input[type="text"],
-        select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-            font-size: 16px;
-        }
-
-        button {
-            width: 100%;
-            padding: 10px;
+            width: 80%;
             border: none;
-            border-radius: 5px;
-            background-color: #4CAF50;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
         }
 
-        button:hover {
-            background-color: #45a049;
+        .titulo {
+            display: flex;
+            width: 12%;
+        }
+
+        .doscolumnas {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .doscolumnas .div2 {
+            margin-top: 57px;
+
+        }
+
+        .doscolumnas>div {
+            width: 50%;
+            margin-right: 30px;
+            margin-bottom: 10px;
+        }
+
+        .enviar input {
+            margin-left: 550px;
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Reserva de Hotel</h1>
-        <form action="#" method="POST">
-            <label for="num_huespedes">Número de Huéspedes:</label>
-            <input type="number" id="num_huespedes" name="num_huespedes" min="1" value="1">
-            <br>
+    <h2>Formulario de alta</h2>
+    <form action name="ejercicio5">
+        <fieldset>
+            <div class="titulo">
+                <label for="nombreyapellido">Nombre y apellidos
+                    <span>*</span></label>
+            </div>
+            <div class="info1">
+                <input type="text"><br>
+                <label for="nombre">Nombre</label><br>
 
-            <label for="fecha_entrada">Fecha de Entrada:</label>
-            <input type="date" id="fecha_entrada" name="fecha_entrada">
-            <br>
+                <input type="text" name id><br>
+                <label for="apellido1">Primer apellido</label><br>
 
-            <label for="fecha_salida">Fecha de Salida:</label>
-            <input type="date" id="fecha_salida" name="fecha_salida">
-            <br>
+                <input type="text"><br>
+                <label for="apellido2">Segundo apellido</label>
+            </div>
+        </fieldset>
 
-            <label for="tipo_habitacion">Tipo de Habitación:</label>
-            <select id="tipo_habitacion" name="tipo_habitacion">
-                <option value="individual">Individual</option>
-                <option value="doble">Doble</option>
-                <option value="suite">Suite</option>
-            </select>
-            <br>
+        <fieldset>
+            <div class="titulo">
+                <label for="direccion">Dirección <span>*</span></label>
+            </div>
+            <div class="doscolumnas">
 
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email">
-            <br>
+                <div>
+                    <input type="text"><br>
+                    <label for="calle">Calle, número, piso, puerta</label><br><br>
+                    <input type="text"><br>
+                    <label for="cp">Codigo postal</label><br><br>
+                    <select name="provincias" id="provincias">
+                        <option value="provincia1">Provincia 1</option>
+                        <option value="provincia2">Provincia 2</option>
+                        <option value="provincia3">Provincia 3</option>
+                    </select><br>
+                    <label for="provincia">Provincia</label><br>
+                </div>
 
-            <button type="submit">Reservar</button>
-        </form>
-    </div>
+                <div class="div2">
+                    <input type="text"><br>
+                    <label for="municipio">Municipio</label><br><br>
+
+                    <select name="paises" id="paises">
+                        <option value="pais1">País 1</option>
+                        <option value="pais2">País 2</option>
+                        <option value="pais3">País 3</option>
+                    </select><br>
+                    <label for="pais">País</label>
+                </div>
+            </div>
+        </fieldset>
+
+        <fieldset class="email">
+            <div class="titulo">
+                <label for="email">Email</label>
+            </div>
+
+            <input type="email">
+        </fieldset>
+
+        <fieldset>
+            <div class="titulo">
+                <label for="telefono">Telefono<span>*</span></label>
+            </div>
+
+            <div class="doscolumnas">
+                <div>
+                    <input type="number"><br>
+                    <label for="Fijo">Fijo</label>
+                </div>
+                <div>
+                    <input type="number"><br>
+                    <label for="movil">Móvil</label>
+                </div>
+
+            </div>
+
+        </fieldset>
+
+        <fieldset class="enviar">
+            <input type="submit" value="Darme de alta">
+        </fieldset>
+
+    </form>
+
 </body>
+
 </html>
