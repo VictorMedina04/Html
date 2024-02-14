@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio05</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input[type="number"],
+        input[type="date"],
+        select,
+        input[type="email"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="container">
+        <h2>Formulario de Reservas de Hotel</h2>
+
+        <form action="procesar_reserva.php" method="post">
+            <div class="form-group">
+            <label for="num_huespedes">Número de Huéspedes:</label>
+            <input type="number" id="num_huespedes" name="num_huespedes" min="1" max="10" value="1">
+            </div>
+
+            <div class="form-group">
+            <label for="fecha_entrada">Fecha de Entrada:</label>
+            <input type="date" id="fecha_entrada" name="fecha_entrada">
+            </div>
+
+            <div class="form-group">
+            <label for="fecha_salida">Fecha de Salida:</label>
+            <input type="date" id="fecha_salida" name="fecha_salida">
+            </div>
+
+            <div class="form-group">
+            <label for="tipo_habitacion">Tipo de Habitación:</label>
+            <select id="tipo_habitacion" name="tipo_habitacion">
+                <option value="individual">Individual</option>
+                <option value="doble">Doble</option>
+                <option value="suite">Suite</option>
+                <option value="familia">Familia</option>
+            </select>
+            </div>
+
+            <div class="form-group">
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo">
+            </div>
+
+            <input type="submit" value="Enviar Reserva">
+        </form>
+        </div>
+
+    </body>
+</html>
