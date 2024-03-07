@@ -15,6 +15,7 @@
 <body>
 
 
+  <!--Publicidad-->
   <div class="alert alert-success alert-dismissible container-fluid">
     <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
     <strong><u>¡Felicidades has ganado un premio!</u></strong> Gana un iphoneProMax15 metiendote en el enlace
@@ -23,7 +24,7 @@
   <!-- Menu -->
   <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="">Cervecería Triana</a>
+      <a class="navbar-brand" href="#">Cervecería Triana</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -41,7 +42,7 @@
           </li>
           <!--Otra cosa-->
           <li class="nav-item">
-            <a class="nav-link" href="">Para añadir a la compra</a>
+            <a class="nav-link" href="#carrito">Para añadir a la compra</a>
           </li>
 
         </ul>
@@ -63,25 +64,35 @@
 
               <!-- Modal body -->
               <div class="modal-body">
-                <form>
+                <form class="was-validated">
                   <div class="my-3">
                     <label for="nombre">Nombre:</label>
-                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Introduzca nombre">
+                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Introduzca nombre"
+                      required>
+                    <div class="valid-feedback">Valido.</div>
+                    <div class="invalid-feedback">Porfavor rellena este campo</div>
                   </div>
                   <div class=" row-cols-12  mb-3 mt-3">
                     <label for="apellidos">Apellidos:</label>
                     <input type="text" class="form-control" name="apellidos" id="apellidos"
-                      placeholder="Introduzca apellidos">
+                      placeholder="Introduzca apellidos" required>
+                    <div class="valid-feedback">Valido.</div>
+                    <div class="invalid-feedback">Porfavor rellena este campo</div>
                   </div>
                   <div class="row-cols-12  mb-3 mt-3">
                     <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email" placeholder="Introduzca email" name="email">
+                    <input type="email" class="form-control" id="email" placeholder="Introduzca email" name="email"
+                      required>
+                    <div class="valid-feedback">Valido.</div>
+                    <div class="invalid-feedback">Porfavor rellena este campo</div>
                   </div>
 
                   <div class="row-cols-12  mb-3">
                     <label for="contraseña">Contraseña:</label>
                     <input type="password" class="form-control" id="contraseña" placeholder="Introduzca contraseña"
-                      name="contraseña">
+                      name="contraseña" required>
+                    <div class="valid-feedback">Valido.</div>
+                    <div class="invalid-feedback">Porfavor rellena este campo</div>
                   </div>
 
                   <div class="form-check mb-3">
@@ -91,10 +102,10 @@
                   </div>
 
                   <button type="submit" class="btn btn-primary"> Iniciar sesion</button>
-
+                </form>
               </div>
 
-              </form>
+
 
 
               <!-- Modal footer -->
@@ -123,40 +134,52 @@
 
               <!-- Modal body -->
               <div class="modal-body">
-                <form>
-                  <div class="my-3">
+                <form class="was-validated">
+                  <div class="row-cols-12 my-3">
                     <label for="nombre">Nombre:</label>
-                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Introduzca nombre">
+                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Introduzca nombre"
+                      required>
+                    <div class="valid-feedback">Valido.</div>
+                    <div class="invalid-feedback">Porfavor rellena este campo</div>
                   </div>
-                  <div class=" row-cols-12  mb-3 mt-3">
+                  <div class=" row-cols-12  my-3">
                     <label for="apellidos">Apellidos:</label>
                     <input type="text" class="form-control" name="apellidos" id="apellidos"
-                      placeholder="Introduzca apellidos">
+                      placeholder="Introduzca apellidos" required>
+                    <div class="valid-feedback">Valido.</div>
+                    <div class="invalid-feedback">Porfavor rellena este campo</div>
                   </div>
-                  <div class="row-cols-12  mb-3 mt-3">
+                  <div class="row-cols-12  my-3">
                     <label for="email">Email:</label>
-                    <input type="email" class="form-control" id="email" placeholder="Introduzca email" name="email">
+                    <input type="email" class="form-control" id="email" placeholder="Introduzca email" name="email"
+                      required>
+                    <div class="valid-feedback">Valido.</div>
+                    <div class="invalid-feedback">Porfavor rellena este campo</div>
                   </div>
 
-                  <div class="row-cols-12  mb-3">
+                  <div class="row-cols-12  my-3">
                     <label for="contraseña">Contraseña:</label>
                     <input type="password" class="form-control" id="contraseña" placeholder="Introduzca contraseña"
-                      name="contraseña">
+                      name="contraseña" required>
+                    <div class="valid-feedback">Valido.</div>
+                    <div class="invalid-feedback">Porfavor rellena este campo</div>
                   </div>
 
-                  <div class="row-cols-12  mb-3">
-                    <label for="contraseña">Repita Contraseña:</label>
-                    <input type="password" class="form-control" id="contraseña" placeholder="Introduzca contraseña"
-                      name="contraseña">
+                  <div class="row-cols-12  my-3">
+                    <label for="contraseña2">Repita Contraseña:</label>
+                    <input type="password" class="form-control" id="contraseña2" placeholder="Introduzca contraseña"
+                      name="contraseña2" required>
+                    <div class="valid-feedback">Valido.</div>
+                    <div class="invalid-feedback">Porfavor rellena este campo</div>
                   </div>
 
 
 
                   <button type="submit" class="btn btn-primary">Registrarse</button>
-
+                </form>
               </div>
 
-              </form>
+
 
 
               <!-- Modal footer -->
@@ -172,10 +195,21 @@
     </div>
   </nav>
 
-  <header>
-    <img src="../Proyecto/img/cerveceria triana.png" class="w-100 h-0" alt="banner">
+  <header class="container">
+    <img src="../Proyecto/img/cerveceria triana v2.png" class="w-100 h-0" alt="banner">
   </header>
 
+  <br>
+  <section class="container">
+    <h5>Nuestra Cervecería se sitúa en el barrio sevillano de Triana, aquí se crea nuestra propia cerveza y también
+      vendemos cerveza nacional e importamos cerveza internacional como alemanas o irlandesas.
+
+      Nuestro negocio se basa en hacer llegar al público cervecero la mejor experiencia de degustación de la cerveza y
+      poder hacerle el sabor de otros pais al alcance de su mano sin tener que moverse de su país.
+      </h6>
+  </section>
+
+  <br>
 
 
 
@@ -187,13 +221,9 @@
 
 
 
-
-
-
-
-  <section id="favoritas">
+  <section id="favoritas" class="container">
     <h2 class="text-center">-Las cervezas mejor valoradas por los clientes</h2>
-    <div id="demo" class="carousel slide container" data-bs-ride="carousel">
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
 
       <!-- Indicators/dots -->
       <div class="carousel-indicators">
@@ -223,12 +253,16 @@
         <span class="carousel-control-next-icon"></span>
       </button>
     </div>
+    <br>
+    <h5>Estas cervezas son las que tienen las mejores valoraciones en nuestra tienda, se nota que aunque haya rubias de
+      otros países las favoritas son las de nuestra tierra sobretodo de la ciudad y después de Andalucía</h5>
+    <br>
   </section>
 
 
   <section id="cervezas">
     <h2 class="text-center">-Inventario</h2>
-    <table class="table table-hover container">
+    <table class="table  mb-4 table-borderer table-responsive-sm container">
       <thead>
         <tr>
           <th scope="col"></th>
@@ -307,7 +341,7 @@
         <tr>
           <th scope="row">8</th>
           <td>Smithwick's irish alet</td>
-          <td>Thornton</td>
+          <td>3.6</td>
           <td>Irlanda</td>
           <td>130 ud</td>
         </tr>
@@ -319,48 +353,168 @@
 
 
 
-  <section id="carrito">
-    <div class="container mt-3">
-      <div class="card" style="width:400px">
-        <img class="card-img-top" src="../bootstrap4/img_avatar1.png" alt="Card image" style="width:100%">
-        <div class="card-body">
-          <h4 class="card-title">John Doe</h4>
-          <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-          <a href="#" class="btn btn-primary">See Profile</a>
-        </div>
+  <section id="carrito" class="row container">
+
+    <div class="col-md-4 card" style="width: 400 px;">
+      <img class="card-img-top" src="../Proyecto/img/cruzcampoCarta.jpg" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">Cruzcampo</h4>
+        <p class="card-text">Nuestra Cruzcampo con más poderío. La personalidad propia y el carácter único y
+          refrescante de esta Cruzcampo Especial se encuentra en las raíces de una tierra de acentos. Inspirada en la
+          receta de 1904.
+          <br>
+          Alcohol: 5,6%
+          <br>
+          Maridaje: Platos con picante, mostazas, escabeches, salazones, carnes blancas, pescados a la plancha,
+          barbacoas y quesos poco curados.
+
+          Lúpulo y extracto de lúpulo. Agua. Malta de cebada. Maíz.
+        </p>
+        <a href="#" class="btn btn-primary">See Profile</a>
       </div>
+    </div>
+    </div>
 
-      <div class="container mt-3">
-        <div class="card" style="width:400px">
-          <img class="card-img-top" src="../bootstrap4/img_avatar1.png" alt="Card image" style="width:100%">
-          <div class="card-body">
-            <h4 class="card-title">John Doe</h4>
-            <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-            <a href="#" class="btn btn-primary">See Profile</a>
-          </div>
-        </div>
+    <div class="container mt-3 col-md-4 card" style="width: 400 px;">
+      <img class="card-img-top" src="../Proyecto/img/victoriaCarta.png" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">Victoria</h4>
+        <p class="card-text">Una cerveza refrescante y equilibrada en cuerpo y aroma, ideal para tomar en cualquier
+          momento del día. Destaca por su amarillo pálido y su espuma de burbujas finas, blancas y brillantes.
+          <br>
+          Alcohol: 4,8%
+          <br>
+          Su eslogan, malagueña y exquisita, define el alma de esta cerveza: orgullosa de ser malagueña y elaborada
+          cuidadosamente con el proceso tradicional de maduración lenta. Su proceso de guarda, con un mínimo de 12
+          días, asegura su sabor exquisito.
 
-        <div class="container mt-3">
 
-          <div class="card" style="width:400px">
-            <img class="card-img-top" src="../bootstrap4/img_avatar1.png" alt="Card image" style="width:100%">
-            <div class="card-body">
-              <h4 class="card-title">John Doe</h4>
-              <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-              <a href="#" class="btn btn-primary">See Profile</a>
-            </div>
-          </div>
+        </p>
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+    </div>
+    </div>
 
-          <div class="container mt-3">
-  
-            <div class="card" style="width:400px">
-              <img class="card-img-top" src="../bootstrap4/img_avatar1.png" alt="Card image" style="width:100%">
-              <div class="card-body">
-                <h4 class="card-title">John Doe</h4>
-                <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-                <a href="#" class="btn btn-primary">See Profile</a>
-              </div>
-            </div>
+    <div class="container mt-3 col-md-4 card" style="width: 400 px;">
+      <img class="card-img-top" src="../Proyecto/img/1906 carta.png" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">1906</h4>
+        <p class="card-text">Con un Extracto Seco Primitivo de 15º. Esta cerveza se elabora a partir de agua de la
+          ciudad de A Coruña y una cuidada selección de maltas Pilsen y tostadas y
+          lúpulos de la variedad “Perle Hallertau”.
+          <br>
+          Alcohol: 6.5%
+          <br>
+          Tradición cervecera, carácter único y las mejores materias primas se unen para dar lugar a una elegante
+          lager extra con agradables notas tostadas.
+        </p>
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+    </div>
+    </div>
+
+    <div class="container mt-3 col-md-4 card" style="width: 400 px;">
+      <img class="card-img-top" src="../Proyecto/img/alhambraCarta.png" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">Alhambra</h4>
+        <p class="card-text">Alhambra Tradicional es una cerveza capaz de trasladarte a nuestros orígenes en cada
+          trago, a la ciudad de Granada de 1925 en la que dos experimentados cerveceros cumplieron su sueño de abrir
+          allí su fábrica de cervezas.
+          <br>
+          Alcohol: 4.6%
+          <br>
+          Cerveza lager de estilo Pilsen de elaboración tradicional e inspiración alemana. Fermentación baja (Lager),
+          con período de maduración para dejar evolucionar los sabores y filtración para dejarla brillante.
+          Elaboración tradicional con las últimas técnologías.F
+        </p>
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+    </div>
+    </div>
+
+    <div class="container mt-3 col-md-4 card" style="width: 400 px;">
+      <img class="card-img-top mt-3" src="../Proyecto/img/wh.png" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">Weihenstephaner hefe weissbier</h4>
+        <p class="card-text">Nuestra cerveza de trigo Weihenstephaner Hefe Weiss es un verdadero clásico y la estrella
+          de nuestra gama de cervezas.Los matices afrutados de plátano y clavo se entremezclan con sabores de malta
+          para crear una cerveza equilibrada con un carácter ligero y cremoso. Esta cerveza de trigo premium,
+          naturalmente turbia y de color ámbar pálido es verdaderamente un festín para los sentidos. Es la recompensa
+          ideal al final de un largo día.
+          <br>
+          Alcohol: 5.4%
+          <br>
+          Nuestra cerveza de trigo destaca por su exquisita espuma blanca. Tentadores aromas de clavo y delicado
+          plátano se elevan a través de las finas burbujas, cautivando los sentidos
+        </p>
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+    </div>
+    </div>
+
+    <div class="container mt-3 col-md-4 card" style="width: 400 px;">
+      <img class="card-img-top mt-3 mb-3" src="../Proyecto/img/augustiner-lagerbier.jpg" alt="Card image"
+        style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">Augustiner keller</h4>
+        <p class="card-text">La cerveza Augustiner Lagerbier Helles es ligera y refrescante, perfecta para las cálidas
+          tardes de verano. Esta Helles de Múnich tiene un sabor único y muy agradable. El estilo Helles de Múnich se
+          caracteriza por cervezas maltosas de sabor dulce y baja graduación. La Augustiner Lagerbier Helles es una de
+          las cervezas más destacadas de este estilo.
+          <br>
+          Alcohol: 5.2%
+          <br>
+          Esta cerveza tiene un sabor ligero y crujiente y un final refrescante. Este estilo de fermentación inferior
+          es perfecto para los amantes de una cerveza rubia alemana ligera y refrescante.
+        </p>
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+    </div>
+    </div>
+
+    <div class="container mt-3 col-md-4 card" style="width: 400 px;">
+      <img class="card-img-top" src="../Proyecto/img/guinnes-draught.png" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">Guinness draught</h4>
+        <p class="card-text">Con un aroma a notas de café tostado y chocolate,una apariencia a un rojo rubí oscuro con
+          una capa superior cremosa y su sabor suavemente equilibrada con notas amargas, dulces y tostadas
+          <br>
+          Alcohol: 4.2%
+          <br>
+          No mentiremos: nos llevó un buen rato elaborar esta cerveza, por eso nos apasiona tanto la forma en que se
+          sirve. Y por «apasiona» queremos decir que estamos «orgullosamente obsesionados». Así es como nos aseguramos
+          de que cada sorbo de tu pinta sepa exactamente como querían nuestros maestros cerveceros.
+        </p>
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+    </div>
+    </div>
+
+    <div class="container mt-3 col-md-4 card" style="width: 400 px;">
+      <img class="card-img-top" src="../Proyecto/img/smithwicks-bottle.webp" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">Smithwick's irish alet</h4>
+        <p class="card-text">El característico color rojo rubí la hace inequívocamente Smithwick's. Con un sabor
+          refrescantemente equilibrado, es una mezcla de lúpulo suave, malta dulce y cebada tostada. El delicado
+          amargor del lúpulo se complementa a la perfección con las notas dulces y malteadas.
+          Su cuerpo es en mayoría malta con algunos toques de tierra y nuez, éstos pueden ser percibidos con la nariz
+          conforme se va tomando.
+          El sabor es bastante simple y limpio, un poco dulce en comparación con su apariencia, de igual forma es la
+          combinación perfecta, un poco de pan remojado en lúpulo. Se dice que el último trago es un suspiro de
+          delicia lo que la hace tan característica.
+          <br>
+          Alcohol: 4.5%
+          <br>
+          De nuevo los maestros cerveceros vienen y nos demuestran como se hacen las cosas en el viejo continente, una
+          cerveza para conocedores que fácilmente se puede convertir en la favorita de cualquiera, aunque con un mundo
+          de cerveza allá afuera, difícilmente se podría afirmar.
+        </p>
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+    </div>
+    </div>
+
+
   </section>
 
 
