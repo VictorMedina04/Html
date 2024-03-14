@@ -1,15 +1,12 @@
-let valores = [true, 5, false, hola, adios, 2];
+let valores = [true, 5, false, "hola", "adios", 2];
 
-function encontrarPalabraMasLarga(animales){
-    let palabraMasLarga = "";
-   
-    animales.forEach(element => {
-        if(element.length > animalMasLargo.length) animalMasLargo = element
-    });
+let mayor = (valores[3] > valores[4]) ? valores[3] : valores[4];
+alert("el mayor es " + mayor);
 
-    
-
-
-
-    return palabraMasLarga;
-}
+alert(valores[0] || valores[2]);
+alert(valores[0] && valores[2]);
+alert(valores[1] + valores[5]);
+alert(valores[1] - valores[5]);
+alert(valores[1] * valores[5]);
+alert(valores[1] / valores[5]);
+alert(valores[1] % valores[5]);
