@@ -1,16 +1,16 @@
-let num1 = 5;
-let num2 = 8;
+let numero1 = 5;
+let numero2 = 8;
 
-if(num1<num2){
-    alert("Número 1 no es mayor que número 2")
+if(numero1>numero2){
+    alert(numero1+" es mayor que "+numero2);
 }
-if(num2>0){
-alert("Numero 2 es positivo")
+if(numero2>=0){
+    alert(numero2+" es positivo");
 }
-if(num1<!0){
-alert("Numero 1 es negativo o distinto de cero")
+if(numero1<0){
+    alert(numero1+" es negativo o distinto de 0");
 }
-if(num1+1 <= num2){
-    alert("Incrementar una unidad a numero 1 no hace que sea igual o mayor a numero 2")
+if((numero1+1)<=numero2){
+    alert("Incrementar en 1 unidad el valor de "+numero1+" no lo hace mayor o igual que "+numero2);
 }
 

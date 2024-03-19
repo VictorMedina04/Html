@@ -1,6 +1,7 @@
-const dato = 7; // Número del que queremos calcular el factorial
-let r = 1;
-for(let i = dato; i>0; i--){
-    r *= i;
-}
-console.log(r);
+let numero = prompt("Número para calcular el factorial:");
+let factorial = 1;
+for (let i = 1; i <= n; i++) {
+      factorial *= i;
+    }
+
+alert("El factorial de " +numero+ " es: " + factorial);
