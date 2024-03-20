@@ -1,8 +1,8 @@
 let str = prompt('Introduzca un texto o palabra por favor');
 
-palindromo(cadena);
+palindromo(str);
 function palindromo(str) {
-    str = str.toLowerCase().replace("");
+    str = str.toLowerCase();
     let alreves = str.split("").reverse().join("");
     if (str == alreves) {
         alert('El texto o palabra introducido es un palindromo');
@@ -11,4 +11,3 @@ function palindromo(str) {
        alert('El texto o palabra introducido no es un palindromo');
     }
 }
-
