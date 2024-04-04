@@ -19,18 +19,21 @@ function botonPulsado() {
         lista.append(nuevoLi)
     */
 
-
+}
+function botonPulsado() {
 
     /*
-      let primerLi = document.querySelector('li')
-         for (let li of primerLi) {
-             alert(primerLi.innerText) 
-         }
-      */
+         let primerLi = document.querySelector('li')
+            for (let li of primerLi) {
+                alert(primerLi.innerText) 
+            }
+         */
+
+}
 
 
 
-
+function botonPulsado() {
     //Va sumando los mensajes de uno en uno
     /*
    let zonaMensajes = document.querySelector('.zonaMensajes')
@@ -39,6 +42,11 @@ function botonPulsado() {
    nuevoP.querySelector('strong').innerText = numActual;
 */
 
+}
+
+
+
+function botonPulsado() {
 
 
     /*
@@ -51,6 +59,7 @@ function botonPulsado() {
 }
 
 
+/*
 
 p1.innerHTML = '<strong>Cambiazo bro.</strong>';
 
@@ -109,3 +118,4 @@ function botonlocologo() {
 
 
 }
+*/
