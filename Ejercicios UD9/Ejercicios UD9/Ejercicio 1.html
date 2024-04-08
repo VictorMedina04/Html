@@ -13,18 +13,23 @@
 
 		function cuentaEnlaces() {
 			// Numero de enlaces de la pagina
-			let enlaces = document.querySelectorAll("a");
-			let contador = 0;
-			for (let i in enlaces) {
-				console.log(i);
-				console.log(enlaces[i].src);
-				console.log(enlaces[i].href);
-			}
+			let enlaces = document.querySelectorAll("a").length;
+			alert(enlaces.length);
 			// Direccion del penultimo enlace
-
+			let penultimoEnlace = enlaces[enlaces.length - 2];
+			alert(penultimoEnlace);
 			// Numero de enlaces que apuntan a http://prueba
 
+			let contador = 0;
+			for (let a of enlaces) {
+				if (a.href === 'http://prueba/') {
+					contador++;
+				}
+			}
+			alert("Hay " + contador + " enlaces de http://prueba");
 			// Numero de enlaces del tercer párrafo
+			let enlaces3parrafo = document.querySelectorAll('p:nth-child(3) a')
+			alert("Hay "+enlaces3parrafo.length+" enlaces en el tercer parrafo")
 		}
 	</script>
 </head>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +11,190 @@
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
+
+    <!-- MENU -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Doctores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Citas</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Novedades -->
+        <section class="container">
+            <h1>Novedades</h1>
+            <p>Cosas novedosas</p>
+        </section>
+
+        <!-- Quienes somos -->
+        <section class="container">
+            <h1>Quienes somos</h1>
+            <p>Cosas sobre nosotros</p>
+        </section>
+
+        <!-- Logros -->
+        <section class="container">
+            <h1>Nuestro logros</h1>
+            <p>Premios de nuestra clinica y nuestro equipo</p>
+        </section>
+
+    </main>
+
+
+    <!-- Inicio sesion -->
+    <section>
+        <aside class="container">
+            <!-- Button to Open inicio sesion -->
+            <button type="button" class="btn btn-primary mx-1" data-bs-toggle="modal" data-bs-target="#myModal">
+                Iniciar sesión
+            </button>
+
+            <!-- Inicio sesion -->
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Inicio sesión</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <form class="was-validated">
+
+                                <div class="my-3">
+                                    <label for="nombre">Nombre:</label>
+                                    <input type="text" class="form-control" name="nombre" id="nombre"
+                                        placeholder="Introduzca nombre" required>
+                                    <div class="valid-feedback">Valido.</div>
+                                    <div class="invalid-feedback">Por favor rellena este campo</div>
+                                </div>
+
+                                <div class=" row-cols-12  mb-3 mt-3">
+                                    <label for="apellidos">Primer Apellido:</label>
+                                    <input type="text" class="form-control" name="apellidos" id="apellidos"
+                                        placeholder="Introduzca apellidos" required>
+                                    <div class="valid-feedback">Valido.</div>
+                                    <div class="invalid-feedback">Por favor rellena este campo</div>
+                                </div>
+
+                                <div class=" row-cols-12  mb-3 mt-3">
+                                    <label for="apellidos">Segundo Apellido:</label>
+                                    <input type="text" class="form-control" name="apellidos" id="apellidos"
+                                        placeholder="Introduzca apellidos">
+                                </div>
+
+                                <div class="row-cols-12  mb-3 mt-3">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" placeholder="Introduzca email"
+                                        name="email" required>
+                                    <div class="valid-feedback">Valido.</div>
+                                    <div class="invalid-feedback">Por favor rellena este campo</div>
+                                </div>
+
+                                <div class="row-cols-12  mb-3">
+                                    <label for="contraseña">Contraseña:</label>
+                                    <input type="password" class="form-control" id="contraseña"
+                                        placeholder="Introduzca contraseña" name="contraseña" required>
+                                    <div class="valid-feedback">Valido.</div>
+                                    <div class="invalid-feedback">Por favor rellena este campo</div>
+                                </div>
+
+                                <div class="form-check mb-3">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox" name="remember">Recordarme
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary"> Iniciar sesión</button>
+                            </form>
+                        </div>
+
+                        <!-- Modal footer -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Fin Inicio sesion-->
+        </aside>
+    </section>
+
+    <!--Footer-->
+    <section id="footer">
+        <!-- Footer -->
+        <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+            <!-- Section-->
+            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+                <!-- Left -->
+                <div class="me-5 d-none d-lg-block">
+                    <span>Contacta con nosotros a traves de nuestras redes sociales: </span>
+                </div>
+            </section>
+
+            <!-- Section: Links  -->
+            <section>
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <!-- Content -->
+                            <h6 class="text-uppercase fw-bold mb-4">Clinica Santa Victoria</h6>
+                            <p>Cosas para escribir</p>
+                        </div>
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
+                            <p><i class="fas fa-home me-3">Dos Hermanas, Sevilla 41703, España</i> </p>
+                            <p class="fas fa-envelope me-3">medina.levic24@triana.salesianos.edu</p>
+                            <p><i class="fas fa-phone me-3">+34 790 45 32 60</i> </p>
+                            <p><i class="fas fa-print me-3">+34 790 45 32 60</i> </p>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                </div>
+            </section>
+            <!-- Section: Links  -->
+
+            <!-- Copyright -->
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                © 2021 Copyright:
+                <a class="text-reset fw-bold" href="">dfs.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </section>
+
+
 </body>
+
 </html>
