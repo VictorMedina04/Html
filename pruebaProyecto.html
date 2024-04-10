@@ -16,63 +16,107 @@
 
     <!-- MENU -->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Doctores</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Citas</a>
-                    </li>
-                </ul>
+
+
+    <div class="container">
+
+        <div class="row col-12 mt-2">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="#">Navbar</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Doctores</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Citas</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="row mt-4 mb-2">
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="../HTML/VictorMedinaLejeune/img/1906.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Clinica Santa Victoria</h5>
+                    </div>
+                </div>
             </div>
+            <div class="col-6">
+                <!-- Novedades -->
+                <section class="container">
+                    <h1>Novedades</h1>
+                    <p>Cosas novedosas Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita hic at,
+                        possimus quo dicta corrupti consectetur dignissimos nisi libero magni odit eveniet doloribus
+                        recusandae minus consequuntur qui accusamus deleniti veritatis!</p>
+                </section>
+
+                <!-- Quienes somos -->
+                <section class="container">
+                    <h1>Quienes somos</h1>
+                    <p>Cosas sobre nosotros Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita hic at,
+                        possimus quo dicta corrupti consectetur dignissimos nisi libero magni odit eveniet doloribus
+                        recusandae minus consequuntur qui accusamus deleniti veritatis!</p>
+                </section>
+
+                <!-- Logros -->
+                <section class="container">
+                    <h1>Nuestro logros</h1>
+                    <p>Premios de nuestra clinica y nuestro equipo Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Expedita hic at,possimus quo dicta corrupti consectetur dignissimos nisi libero magni odit
+                        eveniet doloribus recusandae minus consequuntur qui accusamus deleniti veritatis!</p>
+                </section>
+            </div>
+
+            <div class="col-2">
+                <!-- Inicio sesion-->
+                <form class="was-validated">
+                    <div class="row-cols-12  mb-3 mt-3">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Introduzca email" name="email"
+                            required>
+                        <div class="valid-feedback">Valido.</div>
+                        <div class="invalid-feedback">Por favor rellena este campo</div>
+                    </div>
+
+                    <div class="row-cols-12  mb-3">
+                        <label for="contraseña">Contraseña:</label>
+                        <input type="password" class="form-control" id="contraseña" placeholder="Introduzca contraseña"
+                            name="contraseña" required>
+                        <div class="valid-feedback">Valido.</div>
+                        <div class="invalid-feedback">Por favor rellena este campo</div>
+                    </div>
+
+                    <div class="form-check mb-3">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="remember">Recordarme
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary"> Iniciar sesión</button>
+                </form>
+            </div>
+
         </div>
-    </nav>
 
-<div class="container bg-danger">
-
-</div>
-
-
-
-
-
-
-    <main class="container-fluid align-items-center justify-content-center">
-        <div class="container-fluid align-items-start">
-            <img src="../HTML/VictorMedinaLejeune/img/1906.jpg" height="5%" alt="5%">
+        <div class="row">
+            <div class="col-12"></div>
         </div>
-        <!-- Novedades -->
-        <section class="container">
-            <h1>Novedades</h1>
-            <p>Cosas novedosas</p>
-        </section>
 
-        <!-- Quienes somos -->
-        <section class="container">
-            <h1>Quienes somos</h1>
-            <p>Cosas sobre nosotros</p>
-        </section>
-
-        <!-- Logros -->
-        <section class="container">
-            <h1>Nuestro logros</h1>
-            <p>Premios de nuestra clinica y nuestro equipo</p>
-        </section>
-
-    </main>
-
+    </div>
 
 
 
