@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Ejercicio 3</title>
+	<meta charset="utf-8">
+
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", function () {
+			var boton = document.getElementById("botonAgregar");
+			boton.addEventListener("click", function () {
+				anade(); // Llama a la función anade al hacer clic en el botón
+			});
+
+			function anade() {
+				var elemento = document.createElement("li");
+				var texto = document.createTextNode("Elemento de prueba");
+				elemento.appendChild(texto);
+
+				var lista = document.getElementById("lista");
+				lista.appendChild(elemento);
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<ul id="lista">
+		<li>Lorem ipsum dolor sit amet</li>
+		<li>Consectetuer adipiscing elit</li>
+		<li>Sed mattis enim vitae orci</li>
+		<li>Phasellus libero</li>
+		<li>Maecenas nisl arcu</li>
+	</ul>
+
+	<input type="button" id="botonAgregar" value="Añadir elemento">
+
+</body>
+
+</html>

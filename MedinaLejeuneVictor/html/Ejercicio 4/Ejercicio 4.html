@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Ejercicio 4</title>
+    <meta charset="utf-8">
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            var enlaces = document.querySelectorAll("[id^='enlace_']");
+            enlaces.forEach(function (enlace) {
+                enlace.addEventListener("click", function (event) {
+                    event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+                    var id = this.id.split("_")[1];
+                    muestraOculta(id); // Llama a la función muestraOculta con el id correspondiente
+                });
+            });
+
+            function muestraOculta(id) {
+                var contenidos = document.getElementById("contenidos_" + id);
+                var enlace = document.getElementById("enlace_" + id);
+                if (contenidos.style.display == "" || contenidos.style.display == "block") {
+                    contenidos.style.display = "none";
+                    enlace.innerHTML = "Mostrar contenidos";
+                } else {
+                    contenidos.style.display = "block";
+                    enlace.innerHTML = "Ocultar contenidos";
+                }
+            }
+        });
+    </script>
+</head>
+
+<body>
+
+    <p id="contenidos_1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci.
+        Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien
+        nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices
+        porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis,
+        faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at
+        posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
+    <a id="enlace_1" href="#">Ocultar contenidos</a>
+
+    <br>
+
+    <p id="contenidos_2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci.
+        Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien
+        nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices
+        porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis,
+        faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at
+        posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
+    <a id="enlace_2" href="#">Ocultar contenidos</a>
+
+    <br>
+
+    <p id="contenidos_3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci.
+        Phasellus libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien
+        nunc, posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices
+        porttitor, pede. Nullam sit amet nisl elementum elit convallis malesuada. Phasellus magna sem, semper quis,
+        faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing ullamcorper, odio urna consequat arcu, at
+        posuere ante quam non dolor. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis scelerisque.</p>
+    <a id="enlace_3" href="#">Ocultar contenidos</a>
+
+</body>
+
+</html>

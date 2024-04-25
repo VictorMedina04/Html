@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Ejercicio 2</title>
+	<meta charset="utf-8">
+
+	<style type="text/css">
+		.oculto {
+			display: none;
+		}
+
+		.visible {
+			display: inline;
+		}
+	</style>
+
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", function () {
+			var enlace = document.getElementById("enlace");
+			enlace.addEventListener("click", function (event) {
+				event.preventDefault(); // Evita que el enlace se comporte como un enlace normal (navegar)
+				muestra(); // Llama a la función muestra
+			});
+
+			function muestra() {
+				var elemento = document.getElementById("adicional");
+				elemento.className = "visible";
+
+				var enlace = document.getElementById("enlace");
+				enlace.className = "oculto";
+			}
+		});
+	</script>
+</head>
+
+<body>
+
+	<p id="texto">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed mattis enim vitae orci. Phasellus
+		libero. Maecenas nisl arcu, consequat congue, commodo nec, commodo ultricies, turpis. Quisque sapien nunc,
+		posuere vitae, rutrum et, luctus at, pede. Pellentesque massa ante, ornare id, aliquam vitae, ultrices
+		porttitor, pede. <span id="adicional" class="oculto">Nullam sit amet nisl elementum elit convallis malesuada.
+			Phasellus magna sem, semper quis, faucibus ut, rhoncus non, mi. Duis pellentesque, felis eu adipiscing
+			ullamcorper, odio urna consequat arcu, at posuere ante quam non dolor. Lorem ipsum dolor sit amet,
+			consectetuer adipiscing elit. Duis scelerisque. Donec lacus neque, vehicula in, eleifend vitae, venenatis
+			ac, felis. Donec arcu. Nam sed tortor nec ipsum aliquam ullamcorper. Duis accumsan metus eu urna. Aenean
+			vitae enim. Integer lacus. Vestibulum venenatis erat eu odio. Praesent id metus.</span></p>
+	<a id="enlace" href="#">Seguir leyendo</a>
+
+</body>
+
+</html>

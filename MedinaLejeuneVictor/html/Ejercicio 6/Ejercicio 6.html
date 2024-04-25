@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Ejercicio 6</title>
+	<meta charset="utf-8">
+
+	<style type="text/css">
+		body {
+			font-family: arial, helvetica;
+		}
+
+		#info {
+			width: 160px;
+			border: thin solid silver;
+			padding: .5em;
+			position: fixed;
+		}
+
+		#info h1 {
+			margin: 0;
+		}
+	</style>
+
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", function () {
+			document.addEventListener("click", informacion);
+		});
+
+		function informacion(evento) {
+			evento = evento || window.event;
+			var dimensiones = tamanoVentanaNavegador();
+			var coordenadaX = evento.clientX;
+			var coordenadaY = evento.clientY;
+			var mensajes = [];
+
+			var horizontal = (coordenadaX < dimensiones[0] / 2) ? "Izquierda " : "Derecha ";
+			var vertical = (coordenadaY < dimensiones[1] / 2) ? "arriba" : "abajo";
+
+			mensajes.push("La zona es: " + horizontal + vertical);
+			muestraInformacion(mensajes);
+		}
+
+		function muestraInformacion(mensajes) {
+			var cuadro = document.getElementById("info");
+			cuadro.innerHTML = '<h1>' + mensajes[0] + '</h1>';
+			for (var i = 1; i < mensajes.length; i++) {
+				cuadro.innerHTML += '<p>' + mensajes[i] + '</p>';
+			}
+		}
+
+		function tamanoVentanaNavegador() {
+			var dimensiones = [];
+
+			if (typeof window.innerWidth === 'number') {
+				// No es IE
+				dimensiones = [window.innerWidth, window.innerHeight];
+			} else if (document.documentElement && (document.documentElement.clientWidth || document.documentElement.clientHeight)) {
+				// IE 6 en modo estándar (no quirks)
+				dimensiones = [document.documentElement.clientWidth, document.documentElement.clientHeight];
+			} else if (document.body && (document.body.clientWidth || document.body.clientHeight)) {
+				// IE en modo quirks
+				dimensiones = [document.body.clientWidth, document.body.clientHeight];
+			}
+
+			return dimensiones;
+		}
+	</script>
+</head>
+
+<body>
+	<div id="info"></div>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>

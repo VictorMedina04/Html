@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Ejercicio 5</title>
+	<meta charset="utf-8">
+
+	<style>
+		body {
+			font-family: arial, helvetica;
+		}
+
+		#info {
+			width: 160px;
+			border: thin solid silver;
+			padding: .5em;
+			position: fixed;
+		}
+
+		#info h1 {
+			margin: 0;
+		}
+	</style>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+			document.addEventListener("click", muestraInformacion);
+			document.addEventListener("keypress", muestraInformacion);
+			document.addEventListener("mousemove", muestraInformacion);
+		});
+
+		function muestraInformacion(evento) {
+			var cuadro = document.getElementById("info");
+			var mensaje = [];
+
+			switch (evento.type) {
+				case "click":
+					mensaje[0] = "Ratón";
+					mensaje[1] = "<br>Navegador [" + evento.clientX + "," + evento.clientY + "]<br>";
+					mensaje[2] = "Página [" + evento.pageX + "," + evento.pageY + "]<br>";
+					cuadro.style.background = '#FFFFCC';
+					break;
+				case "keypress":
+					mensaje[0] = "Teclado";
+					mensaje[1] = "<br>Carácter [" + String.fromCharCode(evento.charCode) + "]<br>";
+					mensaje[2] = "Código [" + evento.charCode + "]<br>";
+					cuadro.style.background = '#CCE6FF';
+					break;
+				case "mousemove":
+					cuadro.style.background = 'white';
+					break;
+				default:
+					break;
+			}
+
+			cuadro.innerHTML = '<h1>' + mensaje[0] + '</h1>';
+			for (var i = 1; i < mensaje.length; i++) {
+				cuadro.innerHTML += '<p>' + mensaje[i] + '</p>';
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<div id="info"></div>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>
