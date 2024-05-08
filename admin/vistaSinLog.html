@@ -34,45 +34,52 @@
             border: none;
         }
     </style>
+    <script>
+        function showLoginMessage(section) {
+            alert("Debes iniciar sesión para acceder a " + section + ".");
+        }
+
+        function showMessage() {
+            alert("Mensaje de que se debe iniciar sesión antes de acceder a Doctores.");
+        }
+    </script>
 </head>
 
 <body>
 
-    <div th:fragment="menu" class="container-fluid">
-        <div>
-            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #CAE8FF">
-                <div>
+    <div th:fragment="menu">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #CAE8FF">
+            <div>
 
-                    <img src="../Clinica Santa Victoria Logo.png" width="500px" alt="Logo de la Clínica Santa Victoria">
+                <img src="../Clinica Santa Victoria Logo.png" width="500px" alt="Logo de la Clínica Santa Victoria">
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Doctores</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Citas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Seguros</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Doctores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showLoginMessage('Citas')">Citas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="showLoginMessage('Seguros')">Seguros</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
 
     <div class="row mt-4 mb-2">
-        <div class="col-2">
+        <div class="col-2 ms-5">
             <!--Carta-->
             <div class="card" style="width: 18rem;">
                 <img src="../edificioClinica.jpg" class="card-img-top" alt="...">

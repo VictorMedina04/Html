@@ -39,50 +39,52 @@
 <body>
 
 
-    <div th:fragment="menu" class="container-fluid">
-        <div>
-            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #CAE8FF">
-                <div>
 
-                    <img src="../Clinica Santa Victoria Logo.png" width="500px" alt="Logo de la Clínica Santa Victoria">
 
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Doctores</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Citas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Seguros</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Funciones
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Clientes</a></li>
-                                <li><a class="dropdown-item" href="#">Doctores</a></li>
-                                <li><a class="dropdown-item" href="#">Seguros</a></li>
-                                <li><a class="dropdown-item" href="#">Citas</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
+    <div th:fragment="menu">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #CAE8FF">
+            <div>
+
+                <img src="../Clinica Santa Victoria Logo.png" width="500px"
+                    alt="Logo de la Clínica Santa Victoria">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Doctores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Citas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Seguros</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Funciones
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Clientes</a></li>
+                            <li><a class="dropdown-item" href="#">Doctores</a></li>
+                            <li><a class="dropdown-item" href="#">Seguros</a></li>
+                            <li><a class="dropdown-item" href="#">Citas</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
+
 
     <div class="row mt-4 mb-2 ms-5">
         <div class="col-2 ms-5">
