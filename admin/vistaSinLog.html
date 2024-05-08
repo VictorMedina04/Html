@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio sin log</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <style>
+        .navbar {
+            background-color: #CAE8FF;
+        }
+
+        .navbar-brand img {
+            max-height: 50px;
+            margin-top: -10px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #007bff;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div th:fragment="menu" class="container-fluid">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #CAE8FF">
+                <div>
+
+                    <img src="../Clinica Santa Victoria Logo.png" width="500px" alt="Logo de la Clínica Santa Victoria">
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Doctores</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Citas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Seguros</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="row mt-4 mb-2">
+        <div class="col-2">
+            <!--Carta-->
+            <div class="card" style="width: 18rem;">
+                <img src="../edificioClinica.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Clinica Santa Victoria</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-7">
+            <!-- Novedades -->
+            <section class="container">
+                <h1>Novedades</h1>
+                <p>En la Clínica Santa Victoria, nos preocupamos por ofrecer opciones de atención médica accesibles
+                    y completas para todos nuestros pacientes. Es por eso que hemos diseñado dos tipos de seguros
+                    médicos que se adaptan a diversas necesidades y presupuestos.
+                </p>
+                <p>El primer tipo de seguro, llamémoslo <strong>"Plata"</strong>, ofrece a nuestros pacientes la
+                    posibilidad de
+                    acceder a citas médicas normales de forma gratuita. Además, para aquellas citas especiales que
+                    requieran tratamientos más específicos o procedimientos especializados, los titulares de este
+                    seguro disfrutarán de un generoso descuento. Este plan está diseñado para brindar tranquilidad y
+                    comodidad a aquellos que desean acceder a la atención médica sin preocuparse por los costos
+                    adicionales.</p>
+                <p>Por otro lado, ofrecemos el segundo tipo de seguro, conocido como <strong>"Oro",</strong> que va
+                    un paso más
+                    allá al ofrecer acceso gratuito a todo tipo de citas médicas. Desde consultas de rutina hasta
+                    procedimientos especializados, los titulares de este seguro no tendrán que preocuparse por los
+                    costos asociados a la atención médica. Este plan está diseñado para brindar una tranquilidad
+                    total y una atención médica integral sin barreras financieras.</p>
+            </section>
+
+            <!-- Quienes somos -->
+            <section class="container">
+                <h1>Quienes somos</h1>
+
+                <p>Desde su apertura, la Clínica Santa Victoria se ha distinguido por su enfoque integral hacia la
+                    salud. Más que un centro médico convencional, es un santuario donde la atención personalizada y
+                    el bienestar del paciente son prioridad absoluta. Con un equipo de profesionales médicos
+                    altamente calificados y comprometidos, la clínica ofrece una amplia gama de servicios, desde
+                    consultas médicas generales hasta especialidades más específicas.</p>
+
+                <p>Uno de los pilares de la Clínica Santa Victoria es su dedicación a la prevención y protección de
+                    la salud. Conscientes de la importancia de la prevención, la clínica ofrece servicios de venta
+                    de seguros médicos adaptados a las necesidades individuales de cada paciente. Ya sea para cubrir
+                    consultas de rutina, tratamientos especializados o emergencias médicas, la clínica se esfuerza
+                    por garantizar que todos tengan acceso a la atención médica que merecen.</p>
+
+                <p> Además de su compromiso con la salud física, la Clínica Santa Victoria también promueve el
+                    bienestar emocional de sus pacientes. Con un enfoque holístico, la clínica ofrece servicios de
+                    atención psicológica y terapia emocional, reconociendo la importancia de la salud mental en el
+                    bienestar general.</p>
+
+                <p> Para facilitar el acceso a sus servicios, la Clínica Santa Victoria ha implementado un sistema
+                    de citas ágil y eficiente. A través de su plataforma en línea y su línea telefónica dedicada,
+                    los pacientes pueden solicitar citas con facilidad, permitiendo una gestión conveniente de su
+                    atención médica.</p>
+            </section>
+
+            <!-- Logros -->
+            <section class="container">
+                <h1>Nuestro logros</h1>
+                <p>Premios de nuestra clinica y nuestro equipo Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Expedita hic at,possimus quo dicta corrupti consectetur dignissimos nisi libero magni odit
+                    eveniet doloribus recusandae minus consequuntur qui accusamus deleniti veritatis!</p>
+            </section>
+        </div>
+
+        <div class="col-2">
+            <!-- Inicio sesion-->
+            <form class="was-validated">
+                <div class="row-cols-12  mb-3 mt-3">
+                    <label for="username">Nombre:</label>
+                    <input type="text" class="form-control" id="username" placeholder="Introduzca nombre"
+                        name="username" required>
+                    <div class="valid-feedback">Valido.</div>
+                    <div class="invalid-feedback">Por favor rellena este campo</div>
+                </div>
+
+                <div class="row-cols-12  mb-3">
+                    <label for="contraseña">Contraseña:</label>
+                    <input type="password" class="form-control" id="contraseña" placeholder="Introduzca contraseña"
+                        name="contraseña" required>
+                    <div class="valid-feedback">Valido.</div>
+                    <div class="invalid-feedback">Por favor rellena este campo</div>
+                </div>
+                <button type="submit" class="btn btn-primary"> Iniciar sesión</button>
+            </form>
+
+            <form action="registroCliente" method="post">
+                <button type="submit" class="btn btn-link"> Registrarse</button>
+            </form>
+        </div>
+
+
+
+    </div>
+
+    <!--Footer-->
+    <section id="footer">
+        <!-- Footer -->
+        <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+            <!-- Section-->
+            <section class="d-flex justify-content-center justify-content-lg-between p-4"
+                style="background-color: #CAE8FF">
+                <!-- Left -->
+                <div class="me-5 d-none d-lg-block">
+                    <span>Contacta con nosotros a traves de nuestras redes sociales: </span>
+                </div>
+            </section>
+
+            <!-- Section: Links  -->
+            <section style="background-color: #CAE8FF">
+                <div class="container text-center text-md-start">
+                    <!-- Grid row -->
+                    <div class="row">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <!-- Content -->
+                            <h6 class="text-uppercase fw-bold mb-4">Clinica Santa Victoria</h6>
+                            <p>Cosas para escribir</p>
+                        </div>
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <!-- Links -->
+                            <h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
+                            <p><i class="fas fa-home me-3">Dos Hermanas, Sevilla 41703, España</i> </p>
+                            <p class="fas fa-envelope me-3">medina.levic24@triana.salesianos.edu</p>
+                            <p><i class="fas fa-phone me-3">+34 790 45 32 60</i> </p>
+                            <p><i class="fas fa-print me-3">+34 790 45 32 60</i> </p>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                </div>
+            </section>
+            <!-- Section: Links  -->
+
+            <!-- Copyright -->
+            <div class="text-center p-4" style="background-color: #CAE8FF">
+                © 2021 Copyright:
+                <a class="text-reset fw-bold" href="">dfs.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </section>
+
+
+</body>
+
+</html>

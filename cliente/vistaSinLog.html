@@ -14,16 +14,14 @@
 
 <body>
 
-    <div class="container-fluid">
-
-
-        <div th:fragment="menu">
+    <div th:fragment="menu" class="container-fluid">
+        <div>
             <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #CAE8FF">
                 <div>
-                    <a class="navbar-brand" href="#">
-                        <img src="../Html/Clinica Santa Victoria Logo.png" width="500px"
+                   
+                        <img src="../Clinica Santa Victoria Logo.png" width="500px"
                             alt="Logo de la Clínica Santa Victoria">
-                    </a>
+                    
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -41,16 +39,19 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Citas</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Seguros</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
         </div>
 
         <div class="row mt-4 mb-2">
-            <div class="col-3">
+            <div class="col-2">
                 <!--Carta-->
                 <div class="card" style="width: 18rem;">
-                    <img src="../HTML/VictorMedinaLejeune/img/1906.jpg" class="card-img-top" alt="...">
+                    <img src="../edificioClinica.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Clinica Santa Victoria</h5>
                     </div>
@@ -115,7 +116,7 @@
                 </section>
             </div>
 
-            <div class="col-2">
+            <div class="col-3">
                 <!-- Inicio sesion-->
                 <form class="was-validated">
                     <div class="row-cols-12  mb-3 mt-3">
