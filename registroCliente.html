@@ -28,7 +28,7 @@
         label {
             font-weight: bold;
         }
-    </style> 
+    </style>
 </head>
 
 <body>
@@ -77,10 +77,11 @@
                         <div class="col-md-6">
                             <label for="email" class="form-label">Gmail</label>
                             <input type="email" class="form-control" name="email" id="email"
-                                placeholder="nombre@ejemplo.com" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-                                required>
+                                placeholder="nombre@ejemplo.com"
+                                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
                             <div class="valid-feedback">Valido.</div>
-                            <div class="invalid-feedback">Por favor introduce una dirección de correo electrónico válida.
+                            <div class="invalid-feedback">Por favor introduce una dirección de correo electrónico
+                                válida.
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -89,7 +90,7 @@
                                 <input type="password" class="form-control" name="contrasenya" id="contrasenya"
                                     placeholder="Contraseña" required>
                                 <button class="btn btn-outline-secondary show-password" type="button"
-                                    id="togglePassword"><i class="fas fa-eye"></i></button>
+                                    id="togglePassword"></button>
                             </div>
                             <div class="valid-feedback">Valido.</div>
                             <div class="invalid-feedback">Por favor rellena este campo.</div>
@@ -103,7 +104,7 @@
                                 <input type="password" class="form-control" name="confirmar_contrasenya"
                                     id="confirmar_contrasenya" placeholder="Repetir Contraseña" required>
                                 <button class="btn btn-outline-secondary show-password" type="button"
-                                    id="toggleConfirmPassword"><i class="fas fa-eye"></i></button>
+                                    id="toggleConfirmPassword"></button>
                             </div>
                             <div class="valid-feedback">Valido.</div>
                             <div class="invalid-feedback">Las contraseñas no coinciden.</div>
@@ -117,7 +118,7 @@
         </div>
     </div>
 
-  
+
     <script>
         // Función para mostrar u ocultar la contraseña
         function togglePasswordVisibility(inputId) {
