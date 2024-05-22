@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 
 <head>
     <meta charset="UTF-8">
@@ -8,48 +8,30 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <style>
-        /* Estilos adicionales */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-        }
-
-        form {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        label {
-            font-weight: bold;
-        }
-    </style>
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="../static/css/formularioCliente.css" th:href="@{/css/formularioCliente.css}" />
 </head>
 
 <body>
-
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-8">
-                <form method="post" action="" class="needs-validation" novalidate>
+                <form method="post" th:action="@{/nuevoCliente/submit}" th:object="${clienteForm}"
+                    class="needs-validation" novalidate>
 
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="nombre" class="form-label">Nombre</label>
                             <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre"
-                                required>
+                                th:field="*{nombre}" required>
                             <div class="valid-feedback">Valido.</div>
                             <div class="invalid-feedback">Por favor rellena este campo.</div>
                         </div>
                         <div class="col-md-6">
                             <label for="apellidos" class="form-label">Apellido/s</label>
                             <input type="text" class="form-control" name="apellidos" id="apellidos"
-                                placeholder="Apellido/s" required>
+                                th:field="*{apellidos}" placeholder="Apellido/s" required>
                             <div class="valid-feedback">Valido.</div>
                             <div class="invalid-feedback">Por favor rellena este campo.</div>
                         </div>
@@ -58,16 +40,16 @@
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="dni" class="form-label">DNI</label>
-                            <input type="text" class="form-control" name="dni" id="dni" placeholder="12345678A"
-                                pattern="[0-9]{8}[A-Za-z]{1}" required>
+                            <input type="text" class="form-control" name="dni" id="dni" th:field="*{dni}"
+                                placeholder="12345678A" pattern="[0-9]{8}[A-Za-z]{1}" required>
                             <div class="valid-feedback">Valido.</div>
                             <div class="invalid-feedback">Por favor rellena este campo con 8 números seguidos de una
                                 letra.</div>
                         </div>
                         <div class="col-md-6">
                             <label for="usuario" class="form-label">Nombre de Usuario</label>
-                            <input type="text" class="form-control" name="usuario" id="usuario" placeholder="Usuario"
-                                required>
+                            <input type="text" class="form-control" name="usuario" th:field="*{username}" id="usuario"
+                                placeholder="Usuario" required>
                             <div class="valid-feedback">Valido.</div>
                             <div class="invalid-feedback">Por favor rellena este campo.</div>
                         </div>
@@ -76,7 +58,7 @@
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <label for="email" class="form-label">Gmail</label>
-                            <input type="email" class="form-control" name="email" id="email"
+                            <input type="email" class="form-control" name="email" id="email" th:field="*{gmail}"
                                 placeholder="nombre@ejemplo.com"
                                 pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
                             <div class="valid-feedback">Valido.</div>
@@ -88,9 +70,9 @@
                             <label for="contrasenya" class="form-label">Contraseña</label>
                             <div class="input-group">
                                 <input type="password" class="form-control" name="contrasenya" id="contrasenya"
-                                    placeholder="Contraseña" required>
-                                <button class="btn btn-outline-secondary show-password" type="button"
-                                    id="togglePassword"></button>
+                                    th:field="*{password}" placeholder="Contraseña" required>
+                                <button class="btn btn-outline-secondary toggle-password" type="button"
+                                    data-target="#contrasenya">Mostrar</button>
                             </div>
                             <div class="valid-feedback">Valido.</div>
                             <div class="invalid-feedback">Por favor rellena este campo.</div>
@@ -103,8 +85,8 @@
                             <div class="input-group">
                                 <input type="password" class="form-control" name="confirmar_contrasenya"
                                     id="confirmar_contrasenya" placeholder="Repetir Contraseña" required>
-                                <button class="btn btn-outline-secondary show-password" type="button"
-                                    id="toggleConfirmPassword"></button>
+                                <button class="btn btn-outline-secondary toggle-password" type="button"
+                                    data-target="#confirmar_contrasenya">Mostrar</button>
                             </div>
                             <div class="valid-feedback">Valido.</div>
                             <div class="invalid-feedback">Las contraseñas no coinciden.</div>
@@ -112,49 +94,78 @@
                     </div>
 
                     <button type="submit" class="btn btn-success" id="registerButton">Registrarse</button>
-
                 </form>
             </div>
         </div>
     </div>
 
-
+    <script src="../static/js/formularioCliente.js" th:src="@{/js/formularioCliente.js}"></script>
     <script>
-        // Función para mostrar u ocultar la contraseña
-        function togglePasswordVisibility(inputId) {
-            const input = document.getElementById(inputId);
-            const icon = document.getElementById(`toggle${inputId}`);
-            if (input.type === "password") {
-                input.type = "text";
-                icon.innerHTML = '<i class="fas fa-eye-slash"></i>';
-            } else {
-                input.type = "password";
-                icon.innerHTML = '<i class="fas fa-eye"></i>';
-            }
-        }
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.querySelector('.needs-validation');
 
-        // Event listeners para los botones de mostrar contraseña
-        document.getElementById("togglePassword").addEventListener("click", function () {
-            togglePasswordVisibility("contrasenya");
-        });
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity() || document.getElementById('contrasenya').value !== document.getElementById('confirmar_contrasenya').value) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    if (document.getElementById('contrasenya').value !== document.getElementById('confirmar_contrasenya').value) {
+                        document.getElementById('confirmar_contrasenya').setCustomValidity("Las contraseñas no coinciden.");
+                    } else {
+                        document.getElementById('confirmar_contrasenya').setCustomValidity("");
+                    }
+                }
 
-        document.getElementById("toggleConfirmPassword").addEventListener("click", function () {
-            togglePasswordVisibility("confirmar_contrasenya");
-        });
+                form.classList.add('was-validated');
+            });
 
-        // Validación de que las contraseñas coinciden antes de enviar el formulario
-        document.getElementById("registerButton").addEventListener("click", function (event) {
-            const password = document.getElementById("contrasenya").value;
-            const confirmPassword = document.getElementById("confirmar_contrasenya").value;
-            if (password !== confirmPassword) {
-                event.preventDefault();
-                document.getElementById("confirmar_contrasenya").setCustomValidity("Las contraseñas no coinciden");
-            } else {
-                document.getElementById("confirmar_contrasenya").setCustomValidity("");
-            }
+            document.querySelectorAll('.toggle-password').forEach(button => {
+                button.addEventListener('click', function () {
+                    var input = document.querySelector(this.getAttribute('data-target'));
+                    if (input.type === 'password') {
+                        input.type = 'text';
+                        this.textContent = 'Ocultar';
+                    } else {
+                        input.type = 'password';
+                        this.textContent = 'Mostrar';
+                    }
+                });
+            });
         });
     </script>
+    
+    <script src="../static/js/formularioCliente.js" th:src="@{/js/formularioCliente.js}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.querySelector('.needs-validation');
 
+            form.addEventListener('submit', function (event) {
+                if (!form.checkValidity() || document.getElementById('contrasenya').value !== document.getElementById('confirmar_contrasenya').value) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    if (document.getElementById('contrasenya').value !== document.getElementById('confirmar_contrasenya').value) {
+                        document.getElementById('confirmar_contrasenya').setCustomValidity("Las contraseñas no coinciden.");
+                    } else {
+                        document.getElementById('confirmar_contrasenya').setCustomValidity("");
+                    }
+                }
+
+                form.classList.add('was-validated');
+            });
+
+            document.querySelectorAll('.toggle-password').forEach(button => {
+                button.addEventListener('click', function () {
+                    var input = document.querySelector(this.getAttribute('data-target'));
+                    if (input.type === 'password') {
+                        input.type = 'text';
+                        this.textContent = 'Ocultar';
+                    } else {
+                        input.type = 'password';
+                        this.textContent = 'Mostrar';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

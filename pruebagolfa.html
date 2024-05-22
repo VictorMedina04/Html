@@ -1,58 +1,92 @@
-<input id="myInput">
-
-<!-- datedropper init -->
-<script>
-    new dateDropper({
-        "selector": "#myInput",
-        "format": "mm/dd/y",
-        "lang": "es",
-        "showArrowsOnHover": false,
-        "overlay": false,
-        "expandable": true,
-        "expandedOnly": false,
-        "doubleView": false,
-        "startFromMonday": true,
-        "minYear": "2000",
-        "maxYear": "2024",
-        "jump": "10",
-        "range": false,
-        "disabledWeekDays": "0,6",
-        "autoFill": true,
-        "loopAll": true
-    });
-</script>
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario de Citas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
     <style>
-        :root {
-            --dd-radius: 6px;
-            --dd-shadow: 0 0 2.5em rgba(0, 0, 0, 0.1);
-            --dd-overlay: #004aa2;
-            --dd-background: #ffffff;
-            --dd-text1: #000000;
-            --dd-text2: #ffffff;
-            --dd-primary: #35b5ae;
-            --dd-gradient: #61bec0;
-            --dd-range: #35b5ae;
-            --dd-monthBackground: #35b5ae;
-            --dd-monthText: var(--dd-text2);
-            --dd-monthBorder: #42bbac;
-            --dd-confirmButtonBackground: var(--dd-gradient);
-            --dd-confirmButtonText: var(--dd-text2);
-            --dd-selectedBackground: var(--dd-gradient);
-            --dd-selectedText: #439dc1;
+        body {
+            background-color: #e0f7ff;
+        }
+
+        .container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
         }
     </style>
 </head>
 
 <body>
+
+    <div class="container mt-5">
+        <h2 class="mb-4 text-center">Registrar Nueva Cita</h2>
+        <form action="/addCita" method="post">
+            <div class="mb-3">
+                <label for="idDoctor" class="form-label">ID Doctor</label>
+                <input type="number" class="form-control" id="idDoctor" name="idDoctor" required min="1" title="Introduce un ID válido.">
+            </div>
+            <div class="mb-3">
+                <label for="idCliente" class="form-label">ID Cliente</label>
+                <input type="number" class="form-control" id="idCliente" name="idCliente" required min="1" title="Introduce un ID válido.">
+            </div>
+            <div class="mb-3">
+                <label for="fechaInicio" class="form-label">Fecha Inicio</label>
+                <input type="datetime-local" class="form-control" id="fechaInicio" name="fechaInicio" required>
+            </div>
+            <div class="mb-3">
+                <label for="fechaFin" class="form-label">Fecha Fin</label>
+                <input type="datetime-local" class="form-control" id="fechaFin" name="fechaFin" required>
+            </div>
+            <div class="mb-3">
+                <label for="especial" class="form-label">Especial</label>
+                <select class="form-control" id="especial" name="especial" required>
+                    <option value="">Seleccionar...</option>
+                    <option value="true">Sí</option>
+                    <option value="false">No</option>
+                </select>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Registrar Cita</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const dateInputs = document.querySelectorAll('input[type="datetime-local"]');
+            
+            dateInputs.forEach(input => {
+                input.addEventListener('input', (e) => {
+                    let value = e.target.value;
+                    let time = value.split('T')[1];
+
+                    if (time < '05:00' || time > '21:00') {
+                        e.target.setCustomValidity('Las horas válidas son entre las 05:00 y las 21:00');
+                    } else {
+                        e.target.setCustomValidity('');
+                    }
+                });
+            });
+        });
+    </script>
 
 </body>
 
