@@ -10,83 +10,136 @@
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../static/css/formularioCliente.css" th:href="@{/css/formularioCliente.css}" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .hero {
+            background-image: url('https://via.placeholder.com/1920x600');
+            background-size: cover;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        .features {
+            background-color: #f8f9fa;
+            padding: 50px 0;
+        }
+        .testimonials {
+            padding: 50px 0;
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #CAE8FF">
-        <div class="container-fluid">
-            <img src="/img/Clinica Santa Victoria Logo.png" width="500px" alt="Logo de la Clínica Santa Victoria">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../inicioSinLog.html"
-                            th:href="@{/}">Quienes somos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../doctores.html" th:href="@{/doctores}">Doctores</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../novedades.html" th:href="@{/novedades}">Novedades</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../nuestrosLogros.html" th:href="@{/nuestrosLogros}">Nuestros logros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Citas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../seguros.html" th:href="@{/cliente/seguros}">Seguros</a>
-                    </li>
-                    <li class="nav-item">
-                        <form th:action="@{/logout}" method="POST" id="logoutForm"></form>
-                        <a class="nav-link" href="javascript:document.getElementById('logoutForm').submit()">Cerrar sesión</a>
-                    </li>
-                </ul>
-            </div>
+    <nav th:replace="~{fragmentos/menu4::menu4}"></nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1>Protege lo que más te importa</h1>
+            <p>Encuentra el mejor seguro para ti y tu familia</p>
+            <a href="#formulario" class="btn btn-primary">Comprar Ahora</a>
         </div>
-    </nav>
+    </header>
 
-    <div class="container mt-5 mb-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <form method="post" th:action="@{/cliente/editarCliente/submit}" th:object="${cliente}"
-                    class="needs-validation" novalidate>
-                    
-                    <input th:if="${cliente.id != 0}" type="hidden" name="id" th:field="*{id}" />
-                    <input th:if="${cliente.username != 0}" type="hidden" name="username" th:field="*{username}" />
-                    <input th:if="${cliente.nombre != 0}" type="hidden" name="nombre" th:field="*{nombre}" />
-                    <input th:if="${cliente.apellidos != 0}" type="hidden" name="apellidos" th:field="*{apellidos}" />
-                    <input th:if="${cliente.gmail != 0}" type="hidden" name="gmail" th:field="*{gmail}" />
-                    <input th:if="${cliente.password != 0}" type="hidden" name="password" th:field="*{password}" />
-                    <input th:if="${cliente.dni != 0}" type="hidden" name="dni" th:field="*{dni}" />
-                    <input th:if="${cliente.esAdmin != 0}" type="hidden" name="esAdmin" th:field="*{esAdmin}" />
-                    <input th:if="${cliente.esDoctor != 0}" type="hidden" name="esDoctor" th:field="*{esDoctor}" />
+    <main class="container-fluid py-5">
+        <section class="features container mt-5 mb-5">
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <h3>Seguridad</h3>
+                    <p>Protección completa para ti y tus seres queridos.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Asequibilidad</h3>
+                    <p>Precios competitivos que se ajustan a tu presupuesto.</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Confiabilidad</h3>
+                    <p>Atención al cliente 24/7 para cualquier emergencia.</p>
+                </div>
+            </div>
+        </section>
 
-                    <div class="row mb-3">
-                        <div class="col-md-6">
+        <section id="formulario" class="container mt-5 mb-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <h2>Compra tu seguro</h2>
+                    <form method="post" th:action="@{/cliente/editarCliente/submit}" th:object="${cliente}"
+                        class="needs-validation" novalidate>
+
+                        <!-- Campos ocultos para datos del cliente -->
+                        <input th:if="${cliente.id != 0}" type="hidden" name="id" th:field="*{id}" />
+                        <input th:if="${cliente.username != 0}" type="hidden" name="username" th:field="*{username}" />
+                        <input th:if="${cliente.nombre != 0}" type="hidden" name="nombre" th:field="*{nombre}" />
+                        <input th:if="${cliente.apellidos != 0}" type="hidden" name="apellidos" th:field="*{apellidos}" />
+                        <input th:if="${cliente.gmail != 0}" type="hidden" name="gmail" th:field="*{gmail}" />
+                        <input th:if="${cliente.password != 0}" type="hidden" name="password" th:field="*{password}" />
+                        <input th:if="${cliente.dni != 0}" type="hidden" name="dni" th:field="*{dni}" />
+                        <input th:if="${cliente.esAdmin != 0}" type="hidden" name="esAdmin" th:field="*{esAdmin}" />
+                        <input th:if="${cliente.esDoctor != 0}" type="hidden" name="esDoctor" th:field="*{esDoctor}" />
+
+                        <div class="mb-3">
                             <label for="seguro" class="form-label">Seguro</label>
                             <select class="form-control" required th:field="${cliente.seguro}">
                                 <th:block th:each="seguro : ${seguros}">
-                                    <option th:value="${seguro.idSeguro}" th:text="${seguro.nombre}"></option>
+                                    <option th:value="${seguro.idSeguro}"
+                                        th:text="${seguro.nombre + ' - Precio: ' + seguro.precio}"></option>
                                 </th:block>
                             </select>
                             <div class="valid-feedback">Válido.</div>
                             <div class="invalid-feedback">Por favor seleccione un seguro.</div>
                         </div>
-                    </div>
 
-                    <button type="submit" class="btn btn-success">Comprar seguro</button>
-                </form>
+                        <button type="submit" class="btn btn-success">Comprar seguro</button>
+                    </form>
+                </div>
             </div>
+        </section>
+
+        <section class="testimonials container mt-5 mb-5">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2>Testimonios</h2>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">"Gracias a este seguro, me siento más tranquilo y protegido."</p>
+                            <h5 class="card-title">Juan Pérez</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">"Servicio excelente y precios accesibles."</p>
+                            <h5 class="card-title">María García</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="card-text">"Recomiendo sus seguros a todos mis amigos y familiares."</p>
+                            <h5 class="card-title">Carlos López</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Seguros. Todos los derechos reservados.</p>
         </div>
-    </div>
-    <footer th:replace="~{fragmentos/pie::pie}"></footer>
+    </footer>
 </body>
 
 </html>
