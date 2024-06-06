@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        input[type="number"] {
+            width: 100px;
+        }
+
+        input+span {
+            padding-right: 30px;
+        }
+
+        input:invalid+span::after {
+            position: absolute;
+            content: "✖";
+            padding-left: 5px;
+        }
+
+        input:valid+span::after {
+            position: absolute;
+            content: "✓";
+            padding-left: 5px;
+        }
+    </style>
+    <script>
+        const input = document.createElement("input");
+        input.type = "time";
+        input.min = "21:00";
+        input.max = "18:00";
+        input.value = "23:59";
+
+        if (input.validity.valid && input.type === "time") {
+            // <input type=time> reversed range supported
+        } else {
+            // <input type=time> reversed range unsupported
+        }
+
+    </script>
+</head>
+
+<body>
+    <form method="post" action="/send/">
+        Selecciona la fecha deseada:
+        <input type="datetime-local" value="2024-07-23T11:00"
+               min="2024-03-23T11:00" max="2024-11-23T11:00" step="3600">
+      </form>
+</body>
+
+</html>
